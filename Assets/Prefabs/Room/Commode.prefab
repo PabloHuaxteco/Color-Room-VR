@@ -177,6 +177,8 @@ GameObject:
   - component: {fileID: 6438970896716025968}
   - component: {fileID: 3115408566795358875}
   - component: {fileID: 6762327125432599210}
+  - component: {fileID: 7707761701476945725}
+  - component: {fileID: 6622419347588984223}
   m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
@@ -250,6 +252,47 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7707761701476945725
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2305206099784031951}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4773355822595451164, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &6622419347588984223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2305206099784031951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2677569010367481635
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +385,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4264735641661556309}
+  - component: {fileID: 4947608968502054619}
   m_Layer: 0
   m_Name: Commode
   m_TagString: Untagged
@@ -373,6 +417,22 @@ Transform:
   - {fileID: 6438970896716025968}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4947608968502054619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3637567512011620140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c254514f4a89341a1ec6dff66d6bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groupID: Commode
+  members:
+  - {fileID: 1146089179517113507}
+  - {fileID: 6622419347588984223}
 --- !u!1 &3954990117570893119
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +610,8 @@ GameObject:
   - component: {fileID: 5712055550452126821}
   - component: {fileID: 2893314248882758849}
   - component: {fileID: 4177586014387889022}
+  - component: {fileID: 5178434558330602337}
+  - component: {fileID: 1146089179517113507}
   m_Layer: 0
   m_Name: Commode_Base
   m_TagString: Untagged
@@ -622,6 +684,47 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5178434558330602337
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6850626977801112683}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5925459818154399434, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &1146089179517113507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6850626977801112683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8509516235899855581
 GameObject:
   m_ObjectHideFlags: 0
