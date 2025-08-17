@@ -77,6 +77,8 @@ GameObject:
   - component: {fileID: 4575679582939197533}
   - component: {fileID: 6117925344222507158}
   - component: {fileID: 549546302120210946}
+  - component: {fileID: 8727116370918483681}
+  - component: {fileID: 161237159563205743}
   m_Layer: 0
   m_Name: Fan_Base
   m_TagString: Untagged
@@ -150,6 +152,47 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8727116370918483681
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4288424421916465365}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2708989599258122951, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &161237159563205743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4288424421916465365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: Fan_Base
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5831725393706483858
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,6 +204,8 @@ GameObject:
   - component: {fileID: 265522062503342525}
   - component: {fileID: 1503543318361845303}
   - component: {fileID: 7683025131416585681}
+  - component: {fileID: 4199957153617196993}
+  - component: {fileID: 93530355940460030}
   m_Layer: 0
   m_Name: Fan_Decoration
   m_TagString: Untagged
@@ -234,6 +279,47 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4199957153617196993
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5831725393706483858}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5981355982541530925, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &93530355940460030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5831725393706483858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: Fan_Decoration
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6148640672449576699
 GameObject:
   m_ObjectHideFlags: 0

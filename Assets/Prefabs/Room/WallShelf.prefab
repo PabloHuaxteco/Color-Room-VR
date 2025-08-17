@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8246691001769801931}
   - component: {fileID: 7571784724248353563}
   - component: {fileID: 1662444293198410255}
+  - component: {fileID: 6937606727415392363}
+  - component: {fileID: 6673145715119198442}
   m_Layer: 0
   m_Name: WallShelf_Front
   m_TagString: Untagged
@@ -83,6 +85,47 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6937606727415392363
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4518372024498047007}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8768034980930298798, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &6673145715119198442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4518372024498047007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: WallShelf_Front
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7314239198911618064
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +137,8 @@ GameObject:
   - component: {fileID: 4126128534339786687}
   - component: {fileID: 2030194531248296290}
   - component: {fileID: 6715598989640084805}
+  - component: {fileID: 2251153322194721117}
+  - component: {fileID: 7156140497330265946}
   m_Layer: 0
   m_Name: WallShelf_Back
   m_TagString: Untagged
@@ -166,6 +211,47 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2251153322194721117
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7314239198911618064}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2433526431543387940, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &7156140497330265946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7314239198911618064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: WallShelf_Back
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &9163352211147137381
 GameObject:
   m_ObjectHideFlags: 0

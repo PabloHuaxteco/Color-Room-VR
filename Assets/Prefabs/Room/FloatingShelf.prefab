@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4975149231932494160}
   - component: {fileID: 2856959632862991647}
   - component: {fileID: 2974427034723185545}
+  - component: {fileID: 7499391609995872193}
+  - component: {fileID: 3849957765332342422}
   m_Layer: 0
   m_Name: Shelf_Base_1
   m_TagString: Untagged
@@ -83,6 +85,47 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7499391609995872193
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3619932473102990768}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2141786203090625890, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &3849957765332342422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3619932473102990768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6750879041634424566
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 229293044186516969}
+  - component: {fileID: 8402047103263961713}
   m_Layer: 0
   m_Name: FloatingShelf
   m_TagString: Untagged
@@ -116,6 +160,22 @@ Transform:
   - {fileID: 4429855372564844512}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8402047103263961713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6750879041634424566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c254514f4a89341a1ec6dff66d6bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groupID: FloatingShelf
+  members:
+  - {fileID: 3849957765332342422}
+  - {fileID: 8893123790856278437}
 --- !u!1 &8574467992491087832
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,6 +187,8 @@ GameObject:
   - component: {fileID: 4429855372564844512}
   - component: {fileID: 3738453737745218541}
   - component: {fileID: 7678750650617843701}
+  - component: {fileID: 8899635600408050835}
+  - component: {fileID: 8893123790856278437}
   m_Layer: 0
   m_Name: Shelf_Base_2
   m_TagString: Untagged
@@ -199,3 +261,44 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8899635600408050835
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8574467992491087832}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5373226907094123727, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &8893123790856278437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8574467992491087832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []

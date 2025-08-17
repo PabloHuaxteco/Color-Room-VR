@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2570887480069426662}
   - component: {fileID: 2819153938629714892}
   - component: {fileID: 6435002109922932769}
+  - component: {fileID: 4408959262068474187}
+  - component: {fileID: 8636360900932592802}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -83,6 +85,47 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4408959262068474187
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36892619174741866}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2619086233303812490, guid: f13fcbf73460f9e4b81abb89373b6105, type: 3}
+--- !u!114 &8636360900932592802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36892619174741866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: Door
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2577449162637621314
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,8 +303,10 @@ GameObject:
   - component: {fileID: 8638142157438851092}
   - component: {fileID: 6622107265675600918}
   - component: {fileID: 8247612765547554558}
+  - component: {fileID: 2876843880574394155}
+  - component: {fileID: 4917428249284364065}
   m_Layer: 0
-  m_Name: Prame1
+  m_Name: DoorFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -332,6 +377,47 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2876843880574394155
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4853944295667325633}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6337041427938965999, guid: f13fcbf73460f9e4b81abb89373b6105, type: 3}
+--- !u!114 &4917428249284364065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4853944295667325633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: DoorFrame
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8120407793061970564
 GameObject:
   m_ObjectHideFlags: 0
