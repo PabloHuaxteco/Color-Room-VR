@@ -1274,7 +1274,7 @@ GameObject:
   - component: {fileID: 348255185}
   - component: {fileID: 348255184}
   m_Layer: 0
-  m_Name: Wall_Base
+  m_Name: Wall_South
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3384,7 +3384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1002096861}
   m_Layer: 0
-  m_Name: Wall_4
+  m_Name: Wall_East
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3842,7 +3842,7 @@ GameObject:
   - component: {fileID: 1428418483}
   - component: {fileID: 1428418482}
   m_Layer: 0
-  m_Name: Wall_Base
+  m_Name: Wall_East
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5993,8 +5993,8 @@ Transform:
   - {fileID: 2399905663808980543}
   - {fileID: 3804743272956929275}
   - {fileID: 7614905129667998090}
-  - {fileID: 1195255285592692986}
   - {fileID: 1002096861}
+  - {fileID: 1195255285592692986}
   - {fileID: 543450653209978584}
   - {fileID: 543450651811683586}
   - {fileID: 311681095}
@@ -7035,7 +7035,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1195255285592692986}
   m_Layer: 0
-  m_Name: Wall_3
+  m_Name: Wall_South
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8365,7 +8365,7 @@ PrefabInstance:
     - target: {fileID: 2382151658918492881, guid: 656f71bd02713dc4b80c9e9d944fcbca,
         type: 3}
       propertyPath: m_Name
-      value: Wall_2
+      value: Wall_North
       objectReference: {fileID: 0}
     - target: {fileID: 3385031440982122632, guid: 656f71bd02713dc4b80c9e9d944fcbca,
         type: 3}
@@ -8839,7 +8839,7 @@ PrefabInstance:
     - target: {fileID: 6114583747149420344, guid: 54d9e8dcded98a4409598c6367329235,
         type: 3}
       propertyPath: m_Name
-      value: Wall
+      value: Wall_West
       objectReference: {fileID: 0}
     - target: {fileID: 6981200228367694679, guid: 54d9e8dcded98a4409598c6367329235,
         type: 3}
