@@ -30,6 +30,7 @@ public class PaintableObject : MonoBehaviour
     public string ObjectID => objectID;
     public bool IsPainted => _isPainted;
     public bool IsPartOfGroup => paintableGroup != null;
+    public PaintableGroup Group => paintableGroup;
 
     private void Awake()
     {

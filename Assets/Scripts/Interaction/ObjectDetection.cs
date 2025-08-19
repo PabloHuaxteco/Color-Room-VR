@@ -18,13 +18,12 @@ public class ObjectDetection : MonoBehaviour
         if (!Input.GetMouseButtonDown(0))
             return;
 
-        Debug.Log("Mouse clicked, checking for paintable objects...");
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         //if (Physics.Raycast(controller.transform.position, controller.transform.forward, out var hit, maxDistance, paintableMask))
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
             var obj = hit.collider.GetComponent<PaintableObject>();
-            var group = hit.collider.GetComponentInParent<PaintableGroup>();
+            var group = obj.Group;
 
             if (group != null && group != _hoveredGroup)
             {
