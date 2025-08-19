@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 8605786327257952280}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -245,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 8605786327257952280}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -371,6 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 8605786327257952280}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -555,6 +558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 8605786327257952280}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -681,6 +685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 8605786327257952280}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -807,6 +812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 8605786327257952280}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0

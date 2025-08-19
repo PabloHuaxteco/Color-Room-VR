@@ -8,7 +8,9 @@ public class PaintableObject : MonoBehaviour
     public enum ApplyMode { OneMaterial, AllMaterials }
 
     // Private serialized fields
-    [Header("Configuration")]
+    [Header("Group Reference")]
+    [Tooltip("Reference to the PaintableGroup this object belongs to.")]
+    [SerializeField] private PaintableGroup paintableGroup;
     [Tooltip("Unique identifier for this object. Used for saving/loading color.")]
     [SerializeField] private string objectID;
     [SerializeField] private Color color = Color.white;
@@ -27,11 +29,15 @@ public class PaintableObject : MonoBehaviour
     // Public properties
     public string ObjectID => objectID;
     public bool IsPainted => _isPainted;
+    public bool IsPartOfGroup => paintableGroup != null;
 
     private void Awake()
     {
         _meshRenderer = GetComponent<MeshRenderer>();
         _mpb = new MaterialPropertyBlock();
+
+        if (paintableGroup != null)
+            paintableGroup.AddMember(this);
     }
 
     private void Reset()
@@ -43,6 +49,9 @@ public class PaintableObject : MonoBehaviour
 
     private void Start()
     {
+        if (IsPartOfGroup)
+            return;
+
         if (ColorsDataManager.Instance.TryGetColor(objectID, out var saved))
         {
             SetColor(saved, false);

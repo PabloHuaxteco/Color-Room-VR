@@ -1,4 +1,4 @@
-using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PaintableGroup : MonoBehaviour
@@ -7,7 +7,7 @@ public class PaintableGroup : MonoBehaviour
     [Tooltip("Unique ID for the entire group (e.g., 'Commode').")]
     [SerializeField] private string groupID;
     [Tooltip("All paintable parts belonging to this group.")]
-    [SerializeField] private PaintableObject[] members;
+    [SerializeField] private List<PaintableObject> members = new List<PaintableObject>();
 
     public string GroupID => groupID;
 
@@ -21,9 +21,13 @@ public class PaintableGroup : MonoBehaviour
     private void Start()
     {
         if (ColorsDataManager.Instance.TryGetColor(groupID, out var saved))
-        {
             SetColor(saved, false);
-        }
+    }
+
+    public void AddMember(PaintableObject member)
+    {
+        if (member != null && !members.Contains(member))
+            members.Add(member);
     }
 
     public void SetColor(Color color, bool isPlayerAction = true)
@@ -39,11 +43,9 @@ public class PaintableGroup : MonoBehaviour
 
             // Get the primary member of this group and invoke its OnPainted event.
             // This centralizes the event for the whole group.
-            var primaryObject = members[0];
+            var primaryObject = members.Count > 0 ? members[0] : null;
             if (primaryObject != null)
-            {
                 primaryObject.OnPainted?.Invoke();
-            }
         }
     }
 
