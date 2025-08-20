@@ -24,11 +24,9 @@ public class PaintableObject : MonoBehaviour
     // Private fields
     private MeshRenderer _meshRenderer;
     private MaterialPropertyBlock _mpb;
-    private bool _isPainted;
 
     // Public properties
     public string ObjectID => objectID;
-    public bool IsPainted => _isPainted;
     public bool IsPartOfGroup => paintableGroup != null;
     public PaintableGroup Group => paintableGroup;
 
@@ -53,18 +51,21 @@ public class PaintableObject : MonoBehaviour
         if (IsPartOfGroup)
             return;
 
+        LoadInitialState();
+    }
+
+    private void LoadInitialState()
+    {
         if (ColorsDataManager.Instance.TryGetColor(objectID, out var saved))
         {
             SetColor(saved, false);
             // If an object is already painted on load, we should also trigger its event
             // to ensure animations/unlocks are activated correctly.
             OnPainted?.Invoke();
-            _isPainted = true;
         }
         else
         {
-            SetColor(color, false);
-            _isPainted = false;
+            SetColor(Color.white, false);
         }
     }
 

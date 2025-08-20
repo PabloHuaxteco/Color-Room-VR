@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022024223072503946}
+  - component: {fileID: 64308388014815148}
   m_Layer: 0
   m_Name: Monitor
   m_TagString: Untagged
@@ -33,6 +34,20 @@ Transform:
   - {fileID: 5465816603943213659}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &64308388014815148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5958831273359511724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c254514f4a89341a1ec6dff66d6bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groupID: Monitor
+  members: []
 --- !u!1 &6838541639362733305
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,6 +59,8 @@ GameObject:
   - component: {fileID: 5465816603943213659}
   - component: {fileID: 1800895521369089573}
   - component: {fileID: 8957793879750640257}
+  - component: {fileID: 7287619024140637869}
+  - component: {fileID: 8408483045129533500}
   m_Layer: 0
   m_Name: MonitorDisplay
   m_TagString: Untagged
@@ -117,6 +134,48 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7287619024140637869
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6838541639362733305}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2616491028921762187, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &8408483045129533500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6838541639362733305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 64308388014815148}
+  objectID: MonitorDisplay
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8236945408026897568
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,6 +187,8 @@ GameObject:
   - component: {fileID: 7944897125392266253}
   - component: {fileID: 8527371361168716308}
   - component: {fileID: 6044502241992541166}
+  - component: {fileID: 3260620697393323938}
+  - component: {fileID: 931135770530813738}
   m_Layer: 0
   m_Name: MonitorBase
   m_TagString: Untagged
@@ -200,3 +261,45 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3260620697393323938
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236945408026897568}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4597585249574190089, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &931135770530813738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236945408026897568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 64308388014815148}
+  objectID: MonitorBase
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []

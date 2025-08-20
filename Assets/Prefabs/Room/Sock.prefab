@@ -64,7 +64,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 33f393380ec3bb74a88aa082cdd06e89, type: 2}
-  - {fileID: 2100000, guid: 2d763662c301901479a6cf9be87124ac, type: 2}
+  - {fileID: 2100000, guid: a5d974bd6eb7f8249a10244b17bc1754, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -120,9 +120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 0}
   objectID: Sock
   color: {r: 1, g: 1, b: 1, a: 1}
-  applyMode: 0
+  applyMode: 1
   materialIndex: 0
   OnPainted:
     m_PersistentCalls:

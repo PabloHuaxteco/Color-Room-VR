@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 0}
   objectID: Door
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -245,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 338595954970795862}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -371,6 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 338595954970795862}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -497,6 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 0}
   objectID: DoorFrame
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -623,6 +627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 338595954970795862}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -679,11 +684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groupID: Door_Handle
-  members:
-  - {fileID: 5476657758742563272}
-  - {fileID: 1683961206009776225}
-  - {fileID: 9155987751750485658}
-  - {fileID: 5402338561975564063}
+  members: []
 --- !u!1 &8789036512395159345
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,6 +838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 338595954970795862}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0

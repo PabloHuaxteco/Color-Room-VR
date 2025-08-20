@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8949079099036277518}
   - component: {fileID: 1512727857126789903}
   - component: {fileID: 6161172784593151444}
+  - component: {fileID: 3758528756397364584}
+  - component: {fileID: 6030624321983155220}
   m_Layer: 0
   m_Name: BedSheet_5
   m_TagString: Untagged
@@ -83,6 +85,48 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3758528756397364584
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780333944021731038}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4165804315343540869, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &6030624321983155220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780333944021731038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 0}
+  objectID: BedSheet_5
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2115817460184098077
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +138,8 @@ GameObject:
   - component: {fileID: 6605435664340795507}
   - component: {fileID: 3295083024754133866}
   - component: {fileID: 688879747600979041}
+  - component: {fileID: 8662856086364664998}
+  - component: {fileID: 234274440501351261}
   m_Layer: 0
   m_Name: BedSheet_1
   m_TagString: Untagged
@@ -166,6 +212,48 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8662856086364664998
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115817460184098077}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6866599282306961150, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &234274440501351261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115817460184098077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 0}
+  objectID: BedSheet_1
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2305206099784031951
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 4947608968502054619}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -304,6 +393,8 @@ GameObject:
   - component: {fileID: 2261207845679694461}
   - component: {fileID: 4994133585616525532}
   - component: {fileID: 3392413651665566411}
+  - component: {fileID: 5490035254425136221}
+  - component: {fileID: 8113857102053931550}
   m_Layer: 0
   m_Name: BedSheet_3
   m_TagString: Untagged
@@ -376,6 +467,48 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5490035254425136221
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2677569010367481635}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6952986247367528428, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &8113857102053931550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2677569010367481635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 0}
+  objectID: BedSheet_3
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3637567512011620140
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,9 +563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groupID: Commode
-  members:
-  - {fileID: 1146089179517113507}
-  - {fileID: 6622419347588984223}
+  members: []
 --- !u!1 &3954990117570893119
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +575,9 @@ GameObject:
   - component: {fileID: 4670967958196102891}
   - component: {fileID: 1176940163600202831}
   - component: {fileID: 118760480628320038}
+  - component: {fileID: 9054572554816126402}
+  - component: {fileID: 8030817647876855333}
+  - component: {fileID: 4204889837285740899}
   m_Layer: 0
   m_Name: Commode_Base_Details
   m_TagString: Untagged
@@ -516,6 +650,62 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &9054572554816126402
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3954990117570893119}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4052408194925688482, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &8030817647876855333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3954990117570893119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 4204889837285740899}
+  objectID: 
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4204889837285740899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3954990117570893119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c254514f4a89341a1ec6dff66d6bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groupID: Commode_Details
+  members: []
 --- !u!1 &4474422875940105025
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,6 +717,8 @@ GameObject:
   - component: {fileID: 2477609955301866437}
   - component: {fileID: 7054581997159339821}
   - component: {fileID: 2897189230652659601}
+  - component: {fileID: 8518534833458048375}
+  - component: {fileID: 1747983985840781980}
   m_Layer: 0
   m_Name: BedSheet_4
   m_TagString: Untagged
@@ -599,6 +791,48 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8518534833458048375
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4474422875940105025}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8978220323254110733, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &1747983985840781980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4474422875940105025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 0}
+  objectID: BedSheet_4
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6850626977801112683
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,6 +952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 4947608968502054619}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -736,6 +971,8 @@ GameObject:
   - component: {fileID: 1253406409773835436}
   - component: {fileID: 7882468497488088110}
   - component: {fileID: 8060764360558673449}
+  - component: {fileID: 6801344098521671353}
+  - component: {fileID: 765092616039516265}
   m_Layer: 0
   m_Name: BedSheet_2
   m_TagString: Untagged
@@ -808,6 +1045,48 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6801344098521671353
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8509516235899855581}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3945743840525433626, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &765092616039516265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8509516235899855581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 0}
+  objectID: BedSheet_2
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8947679928534897000
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +1098,8 @@ GameObject:
   - component: {fileID: 6994978402950584849}
   - component: {fileID: 9153877313152477234}
   - component: {fileID: 5161315904155390223}
+  - component: {fileID: 4108436770336104962}
+  - component: {fileID: 5375038705877279489}
   m_Layer: 0
   m_Name: Drawer_Details
   m_TagString: Untagged
@@ -891,6 +1172,48 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4108436770336104962
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8947679928534897000}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2796101201956057829, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &5375038705877279489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8947679928534897000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 4204889837285740899}
+  objectID: 
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &9164155133670183755
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,6 +1225,8 @@ GameObject:
   - component: {fileID: 196368100812251705}
   - component: {fileID: 6731751940935650772}
   - component: {fileID: 2049129310800765406}
+  - component: {fileID: 1602440386480229002}
+  - component: {fileID: 1961457055763240698}
   m_Layer: 0
   m_Name: BedSheet_6
   m_TagString: Untagged
@@ -974,3 +1299,45 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1602440386480229002
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9164155133670183755}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1448908204893995849, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &1961457055763240698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9164155133670183755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 0}
+  objectID: BedSheet_6
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []

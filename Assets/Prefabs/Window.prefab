@@ -432,13 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groupID: Window_Frames
-  members:
-  - {fileID: 5339931142415521903}
-  - {fileID: 8638404660709282742}
-  - {fileID: 8739221215107397017}
-  - {fileID: 3469874904760497975}
-  - {fileID: 8425993353181578986}
-  - {fileID: 2702216684669351437}
+  members: []
 --- !u!1 &5232294130761380886
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6186235228134108889}
   - component: {fileID: 510408758865364110}
   - component: {fileID: 4632237326120889272}
+  - component: {fileID: 5193293103004370625}
+  - component: {fileID: 7137285424998279324}
   m_Layer: 0
   m_Name: Rug_Base_2
   m_TagString: Untagged
@@ -83,6 +85,48 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5193293103004370625
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116121560693305602}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7471726770169566644, guid: 343471c18f633a342b9953401ba971bf, type: 3}
+--- !u!114 &7137285424998279324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116121560693305602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 0}
+  objectID: Rug_Base_2
+  color: {r: 1, g: 1, b: 1, a: 1}
+  applyMode: 0
+  materialIndex: 0
+  OnPainted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2942911120588321327
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,6 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 0}
   objectID: Rug_Base_1
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0

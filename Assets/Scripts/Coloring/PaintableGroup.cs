@@ -22,6 +22,8 @@ public class PaintableGroup : MonoBehaviour
     {
         if (ColorsDataManager.Instance.TryGetColor(groupID, out var saved))
             SetColor(saved, false);
+        else
+            SetColor(Color.white, false);
     }
 
     public void AddMember(PaintableObject member)

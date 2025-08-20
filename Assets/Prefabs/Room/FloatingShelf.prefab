@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 8402047103263961713}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -173,9 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groupID: FloatingShelf
-  members:
-  - {fileID: 3849957765332342422}
-  - {fileID: 8893123790856278437}
+  members: []
 --- !u!1 &8574467992491087832
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,6 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 8402047103263961713}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0

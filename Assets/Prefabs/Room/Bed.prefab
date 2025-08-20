@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 7496753921902963633}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -245,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 0}
   objectID: Mattress
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -371,6 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 7496753921902963633}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -497,6 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 7496753921902963633}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -664,6 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 7496753921902963633}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -790,6 +795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 7496753921902963633}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -916,6 +922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 7496753921902963633}
   objectID: 
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -1042,6 +1049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paintableGroup: {fileID: 0}
   objectID: BedSheet
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
@@ -1100,13 +1108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groupID: Bed_Wood
-  members:
-  - {fileID: 618198568782003602}
-  - {fileID: 7960195758196531437}
-  - {fileID: 2816407694729959591}
-  - {fileID: 6130013024015130424}
-  - {fileID: 5594550426303371819}
-  - {fileID: 6561843907233222863}
+  members: []
 --- !u!1001 &2158400455044288684
 PrefabInstance:
   m_ObjectHideFlags: 0
