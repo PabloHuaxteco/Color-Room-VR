@@ -10,15 +10,18 @@ public class ObjectDetection : MonoBehaviour
     [SerializeField] private PaintVFXManager vfxManager;
     [SerializeField] private ColorPaletteController palette;
 
+    private Camera _mainCamera;
     private PaintableObject _hoveredObject;
     private PaintableGroup _hoveredGroup;
 
+    private void Awake()
+    {
+        _mainCamera = Camera.main;
+    }
+
     private void Update()
     {
-        if (!Input.GetMouseButtonDown(0))
-            return;
-
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
         //if (Physics.Raycast(controller.transform.position, controller.transform.forward, out var hit, maxDistance, paintableMask))
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
@@ -29,6 +32,7 @@ public class ObjectDetection : MonoBehaviour
             {
                 ClearHovered();
                 _hoveredGroup = group;
+                _hoveredObject = obj;
                 group.EnableOutline(palette.CurrentColor);
             }
             else if (obj != null && obj != _hoveredObject)
@@ -39,7 +43,8 @@ public class ObjectDetection : MonoBehaviour
             }
 
             //if (controller.inputDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out bool pressed) && pressed)
-            //{
+            if (Input.GetMouseButtonDown(0))
+            {
                 if (_hoveredObject)
                 {
                     _hoveredObject.SetColor(palette.CurrentColor);
@@ -52,7 +57,7 @@ public class ObjectDetection : MonoBehaviour
                     vfxManager?.PlayAt(hit.point, hit.normal);
                     ClearHovered();
                 }
-            //}
+            }
         }
         else
         {

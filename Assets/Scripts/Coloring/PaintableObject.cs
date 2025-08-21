@@ -24,6 +24,7 @@ public class PaintableObject : MonoBehaviour
     // Private fields
     private MeshRenderer _meshRenderer;
     private MaterialPropertyBlock _mpb;
+    private Outline _outline;
 
     // Public properties
     public string ObjectID => objectID;
@@ -101,9 +102,16 @@ public class PaintableObject : MonoBehaviour
 
     public void EnableOutline(Color color)
     {
+        if (_outline == null)
+            _outline = gameObject.AddComponent<Outline>();
+
+        _outline.OutlineColor = Color.white;
+        _outline.OutlineWidth = 5f;
+        _outline.enabled = true;
     }
 
     public void DisableOutline()
     {
+        _outline.enabled = false;
     }
 }

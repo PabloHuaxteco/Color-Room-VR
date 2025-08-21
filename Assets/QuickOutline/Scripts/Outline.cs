@@ -48,6 +48,14 @@ public class Outline : MonoBehaviour {
     }
   }
 
+  public bool IncludeChildren {
+    get { return includeChildren; }
+    set {
+      includeChildren = value;
+      needsUpdate = true;
+    }
+  }
+
   [Serializable]
   private class ListVector3 {
     public List<Vector3> data;
@@ -61,6 +69,10 @@ public class Outline : MonoBehaviour {
 
   [SerializeField, Range(0f, 10f)]
   private float outlineWidth = 2f;
+
+  [Header("Scope Options")]
+  [SerializeField, Tooltip("If enabled, the outline will also apply to the object's children.")]
+  private bool includeChildren;
 
   [Header("Optional")]
 
@@ -81,9 +93,10 @@ public class Outline : MonoBehaviour {
   private bool needsUpdate;
 
   void Awake() {
-
     // Cache renderers
-    renderers = GetComponentsInChildren<Renderer>();
+    renderers = includeChildren
+      ? GetComponentsInChildren<Renderer>()
+      : new Renderer[] { GetComponent<Renderer>() };
 
     // Instantiate outline materials
     outlineMaskMaterial = Instantiate(Resources.Load<Material>(@"Materials/OutlineMask"));
@@ -158,12 +171,14 @@ public class Outline : MonoBehaviour {
   }
 
   void Bake() {
-
     // Generate smooth normals for each mesh
     var bakedMeshes = new HashSet<Mesh>();
 
-    foreach (var meshFilter in GetComponentsInChildren<MeshFilter>()) {
+    var meshFilters = includeChildren
+      ? GetComponentsInChildren<MeshFilter>()
+      : new MeshFilter[] { GetComponent<MeshFilter>() };
 
+    foreach (var meshFilter in meshFilters) {
       // Skip duplicates
       if (!bakedMeshes.Add(meshFilter.sharedMesh)) {
         continue;
@@ -178,10 +193,12 @@ public class Outline : MonoBehaviour {
   }
 
   void LoadSmoothNormals() {
-
     // Retrieve or generate smooth normals
-    foreach (var meshFilter in GetComponentsInChildren<MeshFilter>()) {
+    var meshFilters = includeChildren
+      ? GetComponentsInChildren<MeshFilter>()
+      : new MeshFilter[] { GetComponent<MeshFilter>() };
 
+    foreach (var meshFilter in meshFilters) {
       // Skip if smooth normals have already been adopted
       if (!registeredMeshes.Add(meshFilter.sharedMesh)) {
         continue;
@@ -203,8 +220,20 @@ public class Outline : MonoBehaviour {
     }
 
     // Clear UV3 on skinned mesh renderers
-    foreach (var skinnedMeshRenderer in GetComponentsInChildren<SkinnedMeshRenderer>()) {
+    //var skinnedMeshRenderers = includeChildren
+    //  ? GetComponentsInChildren<SkinnedMeshRenderer>()
+    //  : new SkinnedMeshRenderer[] { GetComponent<SkinnedMeshRenderer>() };
 
+    SkinnedMeshRenderer[] skinnedMeshRenderers;   
+    if (includeChildren){
+      skinnedMeshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
+    }
+    else{
+      var smr = GetComponent<SkinnedMeshRenderer>();
+      skinnedMeshRenderers = smr != null ? new SkinnedMeshRenderer[] { smr } : new SkinnedMeshRenderer[0];
+    }
+
+    foreach (var skinnedMeshRenderer in skinnedMeshRenderers) {
       // Skip if UV3 has already been reset
       if (!registeredMeshes.Add(skinnedMeshRenderer.sharedMesh)) {
         continue;
