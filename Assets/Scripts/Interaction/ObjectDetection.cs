@@ -28,12 +28,16 @@ public class ObjectDetection : MonoBehaviour
             var obj = hit.collider.GetComponent<PaintableObject>();
             var group = obj.Group;
 
-            if (group != null && group != _hoveredGroup)
+            if (group != null)
             {
-                ClearHovered();
-                _hoveredGroup = group;
-                _hoveredObject = obj;
-                group.EnableOutline(palette.CurrentColor);
+                if (group != _hoveredGroup)
+                {
+                    ClearHovered();
+                    _hoveredGroup = group;
+                    _hoveredObject = obj;
+                    group.EnableOutline(palette.CurrentColor);
+                }
+                // if the group is the same, no need to change hoveredGroup
             }
             else if (obj != null && obj != _hoveredObject)
             {
