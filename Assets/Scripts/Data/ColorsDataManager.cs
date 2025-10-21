@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using EditorAttributes;
 
 public class ColorsDataManager : MonoBehaviour
 {
@@ -64,7 +65,7 @@ public class ColorsDataManager : MonoBehaviour
         _colors = _persistence.Load();
     }
 
-    [ContextMenu("Open Offline Persistent Data Path")]
+    [Button("Open Offline File Path", 25)]
     private void OpenOfflinePersistentDataPath()
     {
         Application.OpenURL("file://" + OfflinePersistentDataPath);

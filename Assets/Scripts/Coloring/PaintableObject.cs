@@ -1,3 +1,4 @@
+using EditorAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,7 +16,7 @@ public class PaintableObject : MonoBehaviour
     [SerializeField] private string objectID;
     [SerializeField] private Color color = Color.white;
     [SerializeField] private ApplyMode applyMode;
-    [Tooltip("The material index to change if ApplyMode is OneMaterial."), Min(0)]
+    [Tooltip("The material index to change if ApplyMode is OneMaterial."), ShowField(nameof(applyMode), ApplyMode.OneMaterial), Clamp(0, Mathf.Infinity)]
     [SerializeField] private int materialIndex = 0;
     [Header("Events")]
     [Tooltip("Fired when the object's color is set by the player.")]
