@@ -49,15 +49,15 @@ public class ObjectDetection : MonoBehaviour
             //if (controller.inputDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out bool pressed) && pressed)
             if (Input.GetMouseButtonDown(0))
             {
-                if (_hoveredObject)
+                if (_hoveredGroup)
                 {
-                    _hoveredObject.SetColor(palette.CurrentColor);
+                    _hoveredGroup.SetColor(palette.CurrentColor);
                     vfxManager?.PlayAt(hit.point, hit.normal);
                     ClearHovered();
                 }
-                else if (_hoveredGroup)
+                else if (_hoveredObject)
                 {
-                    _hoveredGroup.SetColor(palette.CurrentColor);
+                    _hoveredObject.SetColor(palette.CurrentColor);
                     vfxManager?.PlayAt(hit.point, hit.normal);
                     ClearHovered();
                 }
