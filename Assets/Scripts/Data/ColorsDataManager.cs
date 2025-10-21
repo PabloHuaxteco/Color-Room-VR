@@ -7,12 +7,19 @@ public class ColorsDataManager : MonoBehaviour
     // Static variables and properties
     public static ColorsDataManager Instance { get; private set; }
 
-    // Private serialized fields
+    //Private variables (serialized fields)
+    [SerializeField, Min(0)]
+    private int roomID = 1;
+
+    // Private variables
     private Dictionary<string, Color> _colors = new();
     private IColorPersistenceService _persistence;
     private readonly float _saveDelay = 1f;
     private float _lastSaveTime;
     private bool _dirty;
+
+    //Properties
+    public string OfflinePersistentDataPath { get { return Application.persistentDataPath; } private set { } }
 
     private void Awake()
     {
@@ -23,7 +30,7 @@ public class ColorsDataManager : MonoBehaviour
         }
         Instance = this;
 
-        string path = Path.Combine(Application.persistentDataPath, "ColorsRoom_1.json");
+        string path = Path.Combine(OfflinePersistentDataPath, $"ColorsRoom_{roomID}");
         _persistence = new JsonFilePersistenceService(path);
 
         LoadColors();
@@ -55,5 +62,11 @@ public class ColorsDataManager : MonoBehaviour
     private void LoadColors()
     {
         _colors = _persistence.Load();
+    }
+
+    [ContextMenu("Open Offline Persistent Data Path")]
+    private void OpenOfflinePersistentDataPath()
+    {
+        Application.OpenURL("file://" + OfflinePersistentDataPath);
     }
 }

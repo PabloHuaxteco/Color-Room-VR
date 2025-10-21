@@ -22,7 +22,7 @@ public class JsonFilePersistenceService : IColorPersistenceService
 
     public JsonFilePersistenceService(string filePath)
     {
-        _filePath = filePath;
+        _filePath = $"{filePath}.json";
     }
 
     public Dictionary<string, Color> Load()
