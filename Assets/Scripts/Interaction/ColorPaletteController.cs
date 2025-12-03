@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class ColorPaletteController : MonoBehaviour
+namespace ColorRoomVR
 {
-    // Private serialized fields
-    [SerializeField] private Color currentColor = Color.white;
-
-    public Color CurrentColor => currentColor;
-    public event System.Action<Color> OnColorSelected;
-
-    public void SelectColor(Color color)
+    public class ColorPaletteController : MonoBehaviour
     {
-        currentColor = color;
-        OnColorSelected?.Invoke(color);
+        // Private serialized fields
+        [SerializeField] private Color currentColor = Color.white;
+
+        public Color CurrentColor => currentColor;
+        public event System.Action<Color> OnColorSelected;
+
+        public void SelectColor(Color color)
+        {
+            currentColor = color;
+            OnColorSelected?.Invoke(color);
+        }
     }
 }

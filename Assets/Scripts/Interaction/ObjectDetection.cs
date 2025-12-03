@@ -1,79 +1,82 @@
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
 
-public class ObjectDetection : MonoBehaviour
+namespace ColorRoomVR
 {
-    [Header("Settings")]
-    [SerializeField] private LayerMask paintableMask;
-    [SerializeField] private float maxDistance = 10f;
-    [SerializeField] private XRController controller;
-    [SerializeField] private PaintVFXManager vfxManager;
-    [SerializeField] private ColorPaletteController palette;
-
-    private Camera _mainCamera;
-    private PaintableObject _hoveredObject;
-    private PaintableGroup _hoveredGroup;
-
-    private void Awake()
+    public class ObjectDetection : MonoBehaviour
     {
-        _mainCamera = Camera.main;
-    }
+        [Header("Settings")]
+        [SerializeField] private LayerMask paintableMask;
+        [SerializeField] private float maxDistance = 10f;
+        [SerializeField] private XRController controller;
+        [SerializeField] private PaintVFXManager vfxManager;
+        [SerializeField] private ColorPaletteController palette;
 
-    private void Update()
-    {
-        Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
-        //if (Physics.Raycast(controller.transform.position, controller.transform.forward, out var hit, maxDistance, paintableMask))
-        if (Physics.Raycast(ray, out RaycastHit hit))
+        private Camera _mainCamera;
+        private PaintableObject _hoveredObject;
+        private PaintableGroup _hoveredGroup;
+
+        private void Awake()
         {
-            var obj = hit.collider.GetComponent<PaintableObject>();
-            var group = obj.Group;
+            _mainCamera = Camera.main;
+        }
 
-            if (group != null)
+        private void Update()
+        {
+            Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
+            //if (Physics.Raycast(controller.transform.position, controller.transform.forward, out var hit, maxDistance, paintableMask))
+            if (Physics.Raycast(ray, out RaycastHit hit))
             {
-                if (group != _hoveredGroup)
+                var obj = hit.collider.GetComponent<PaintableObject>();
+                var group = obj.Group;
+
+                if (group != null)
+                {
+                    if (group != _hoveredGroup)
+                    {
+                        ClearHovered();
+                        _hoveredGroup = group;
+                        _hoveredObject = obj;
+                        group.EnableOutline(palette.CurrentColor);
+                    }
+                    // if the group is the same, no need to change hoveredGroup
+                }
+                else if (obj != null && obj != _hoveredObject)
                 {
                     ClearHovered();
-                    _hoveredGroup = group;
                     _hoveredObject = obj;
-                    group.EnableOutline(palette.CurrentColor);
+                    obj.EnableOutline(palette.CurrentColor);
                 }
-                // if the group is the same, no need to change hoveredGroup
+
+                //if (controller.inputDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out bool pressed) && pressed)
+                if (Input.GetMouseButtonDown(0))
+                {
+                    if (_hoveredGroup)
+                    {
+                        _hoveredGroup.SetColor(palette.CurrentColor);
+                        vfxManager?.PlayAt(hit.point, hit.normal);
+                        ClearHovered();
+                    }
+                    else if (_hoveredObject)
+                    {
+                        _hoveredObject.SetColor(palette.CurrentColor);
+                        vfxManager?.PlayAt(hit.point, hit.normal);
+                        ClearHovered();
+                    }
+                }
             }
-            else if (obj != null && obj != _hoveredObject)
+            else
             {
                 ClearHovered();
-                _hoveredObject = obj;
-                obj.EnableOutline(palette.CurrentColor);
-            }
-
-            //if (controller.inputDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out bool pressed) && pressed)
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (_hoveredGroup)
-                {
-                    _hoveredGroup.SetColor(palette.CurrentColor);
-                    vfxManager?.PlayAt(hit.point, hit.normal);
-                    ClearHovered();
-                }
-                else if (_hoveredObject)
-                {
-                    _hoveredObject.SetColor(palette.CurrentColor);
-                    vfxManager?.PlayAt(hit.point, hit.normal);
-                    ClearHovered();
-                }
             }
         }
-        else
+
+        private void ClearHovered()
         {
-            ClearHovered();
+            _hoveredObject?.DisableOutline();
+            _hoveredObject = null;
+            _hoveredGroup?.DisableOutline();
+            _hoveredGroup = null;
         }
-    }
-
-    private void ClearHovered()
-    {
-        _hoveredObject?.DisableOutline();
-        _hoveredObject = null;
-        _hoveredGroup?.DisableOutline();
-        _hoveredGroup = null;
     }
 }

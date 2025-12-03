@@ -3,71 +3,74 @@ using System.IO;
 using UnityEngine;
 using EditorAttributes;
 
-public class ColorsDataManager : MonoBehaviour
+namespace ColorRoomVR
 {
-    // Static variables and properties
-    public static ColorsDataManager Instance { get; private set; }
-
-    //Private variables (serialized fields)
-    [SerializeField, Min(0)]
-    private int roomID = 1;
-
-    // Private variables
-    private Dictionary<string, Color> _colors = new();
-    private IColorPersistenceService _persistence;
-    private readonly float _saveDelay = 1f;
-    private float _lastSaveTime;
-    private bool _dirty;
-
-    //Properties
-    public string OfflinePersistentDataPath { get { return Application.persistentDataPath; } private set { } }
-
-    private void Awake()
+    public class ColorsDataManager : MonoBehaviour
     {
-        if (Instance != null)
+        // Static variables and properties
+        public static ColorsDataManager Instance { get; private set; }
+
+        //Private variables (serialized fields)
+        [SerializeField, Min(0)]
+        private int roomID = 1;
+
+        // Private variables
+        private Dictionary<string, Color> _colors = new();
+        private IColorPersistenceService _persistence;
+        private readonly float _saveDelay = 1f;
+        private float _lastSaveTime;
+        private bool _dirty;
+
+        //Properties
+        public string OfflinePersistentDataPath { get { return Application.persistentDataPath; } private set { } }
+
+        private void Awake()
         {
-            Destroy(this);
-            return;
+            if (Instance != null)
+            {
+                Destroy(this);
+                return;
+            }
+            Instance = this;
+
+            string path = Path.Combine(OfflinePersistentDataPath, $"ColorsRoom_{roomID}");
+            _persistence = new JsonFilePersistenceService(path);
+
+            LoadColors();
         }
-        Instance = this;
 
-        string path = Path.Combine(OfflinePersistentDataPath, $"ColorsRoom_{roomID}");
-        _persistence = new JsonFilePersistenceService(path);
+        private void Update()
+        {
+            if (_dirty && Time.time - _lastSaveTime > _saveDelay)
+                SaveColors();
+        }
 
-        LoadColors();
-    }
+        public bool TryGetColor(string id, out Color color) => _colors.TryGetValue(id, out color);
 
-    private void Update()
-    {
-        if (_dirty && Time.time - _lastSaveTime > _saveDelay)
-            SaveColors();
-    }
+        public void SetColor(string id, Color color)
+        {
+            if (string.IsNullOrEmpty(id)) return;
 
-    public bool TryGetColor(string id, out Color color) => _colors.TryGetValue(id, out color);
+            _colors[id] = color;
+            _dirty = true;
+            _lastSaveTime = Time.time;
+        }
 
-    public void SetColor(string id, Color color)
-    {
-        if (string.IsNullOrEmpty(id)) return;
+        private void SaveColors()
+        {
+            _persistence.Save(_colors);
+            _dirty = false;
+        }
 
-        _colors[id] = color;
-        _dirty = true;
-        _lastSaveTime = Time.time;
-    }
+        private void LoadColors()
+        {
+            _colors = _persistence.Load();
+        }
 
-    private void SaveColors()
-    {
-        _persistence.Save(_colors);
-        _dirty = false;
-    }
-
-    private void LoadColors()
-    {
-        _colors = _persistence.Load();
-    }
-
-    [Button("Open Offline File Path", 25)]
-    private void OpenOfflinePersistentDataPath()
-    {
-        Application.OpenURL("file://" + OfflinePersistentDataPath);
+        [Button("Open Offline File Path", 25)]
+        private void OpenOfflinePersistentDataPath()
+        {
+            Application.OpenURL("file://" + OfflinePersistentDataPath);
+        }
     }
 }

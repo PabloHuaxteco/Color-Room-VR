@@ -1,24 +1,27 @@
 using UnityEngine;
 
-public class EnableOnPaint : MonoBehaviour
+namespace ColorRoomVR
 {
-    // Private serialized fields
-    [SerializeField] private GameObject[] objectsToEnable;
-    [SerializeField] private PaintableObject target;
-
-    private void OnEnable()
+    public class EnableOnPaint : MonoBehaviour
     {
-        target.OnPainted.AddListener(OnPainted);
-    }
+        // Private serialized fields
+        [SerializeField] private GameObject[] objectsToEnable;
+        [SerializeField] private PaintableObject target;
 
-    private void OnDisable()
-    {
-        target.OnPainted.RemoveListener(OnPainted);
-    }
+        private void OnEnable()
+        {
+            target.OnPainted.AddListener(OnPainted);
+        }
 
-    private void OnPainted()
-    {
-        foreach (var go in objectsToEnable)
-            go.SetActive(true);
+        private void OnDisable()
+        {
+            target.OnPainted.RemoveListener(OnPainted);
+        }
+
+        private void OnPainted()
+        {
+            foreach (var go in objectsToEnable)
+                go.SetActive(true);
+        }
     }
 }

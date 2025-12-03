@@ -1,33 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationOnPaint : MonoBehaviour
+namespace ColorRoomVR
 {
-    // Private serialized fields
-    [SerializeField] private PaintableObject target;
-
-    // Private fields
-    private Animator animator;
-
-    private void OnEnable()
+    public class AnimationOnPaint : MonoBehaviour
     {
-        target.OnPainted.AddListener(OnPainted);
-    }
+        // Private serialized fields
+        [SerializeField] private PaintableObject target;
 
-    private void OnDisable()
-    {
-        target.OnPainted.RemoveListener(OnPainted);
-    }
+        // Private fields
+        private Animator animator;
 
-    private void Awake()
-    {
-        animator = GetComponent<Animator>();
-    }
+        private void OnEnable()
+        {
+            target.OnPainted.AddListener(OnPainted);
+        }
 
-    private void OnPainted()
-    {
-        if (animator != null)
-            animator.SetTrigger("Play");
+        private void OnDisable()
+        {
+            target.OnPainted.RemoveListener(OnPainted);
+        }
+
+        private void Awake()
+        {
+            animator = GetComponent<Animator>();
+        }
+
+        private void OnPainted()
+        {
+            if (animator != null)
+                animator.SetTrigger("Play");
+        }
     }
 }
