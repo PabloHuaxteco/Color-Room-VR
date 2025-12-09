@@ -37,7 +37,7 @@ namespace ColorRoomVR
                         ClearHovered();
                         _hoveredGroup = group;
                         _hoveredObject = obj;
-                        group.EnableOutline(palette.CurrentColor);
+                        group.EnableOutline(palette.SelectedColor);
                     }
                     // if the group is the same, no need to change hoveredGroup
                 }
@@ -45,7 +45,7 @@ namespace ColorRoomVR
                 {
                     ClearHovered();
                     _hoveredObject = obj;
-                    obj.EnableOutline(palette.CurrentColor);
+                    obj.EnableOutline(palette.SelectedColor);
                 }
 
                 //if (controller.inputDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out bool pressed) && pressed)
@@ -53,13 +53,13 @@ namespace ColorRoomVR
                 {
                     if (_hoveredGroup)
                     {
-                        _hoveredGroup.SetColor(palette.CurrentColor);
+                        _hoveredGroup.SetColor(palette.SelectedColor);
                         vfxManager?.PlayAt(hit.point, hit.normal);
                         ClearHovered();
                     }
                     else if (_hoveredObject)
                     {
-                        _hoveredObject.SetColor(palette.CurrentColor);
+                        _hoveredObject.SetColor(palette.SelectedColor);
                         vfxManager?.PlayAt(hit.point, hit.normal);
                         ClearHovered();
                     }
