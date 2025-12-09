@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class ColorPaletteController : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDragHandler, IInitializePotentialDragHandler
 {
+    [Header("General")]
+    [SerializeField] Image colorWheel;
     [SerializeField] RectTransform picker;
     [SerializeField] Image pickedColorImage;
-    [SerializeField] Material colorWheelMat;
     [SerializeField] int totalNumberofColors = 24;
     [SerializeField] int wheelsCount = 2;
     [SerializeField]
@@ -18,6 +19,8 @@ public class ColorPaletteController : MonoBehaviour, IBeginDragHandler, IDragHan
     [SerializeField] bool inertia = true;
     [SerializeField] float decelerationRate = 0.135f;
     [SerializeField] bool wholeSegment = false;
+    [Tooltip("Use false, if the palette position/size or picker position change in runtime (Recalculate Rect values)")]
+    [SerializeField] bool isStationary = true;
 
     [Header("Limits")]
     [SerializeField] [Range(0.5f, 0.001f)] float minimumSatValStep = 0.01f;
@@ -32,6 +35,10 @@ public class ColorPaletteController : MonoBehaviour, IBeginDragHandler, IDragHan
     float omega = 0;
     float previousTheta;
     float theta;
+
+    RectTransform rect;
+    Camera cam;
+    Material colorWheelMat;
 
     float previousDiscretedH;
     float sat = 1, val = 1;
@@ -79,23 +86,52 @@ public class ColorPaletteController : MonoBehaviour, IBeginDragHandler, IDragHan
             }
         }
     }
+    [Header("Events")]
     public ColorChangeEvent OnColorChange;
     public HueChangeEvent OnHueChange;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
+        LoadComponents();
         CalculatePresets();
         UpdateMaterialInitialValues();
         UpdateMaterial();
         UpdateColor();
+    }
+
+    void OnDestroy()
+    {
+        Destroy(colorWheelMat);
+    }
+
+    void LoadComponents()
+    {
+        //Rect Transform
+        rect = GetComponent<RectTransform>();
+        //Camera
+        Canvas canvas = rect.GetComponentInParent<Canvas>().rootCanvas;
+        switch(canvas.renderMode)
+        {
+            case RenderMode.ScreenSpaceOverlay:
+                cam = null;
+                break;
+            case RenderMode.ScreenSpaceCamera:
+                cam = canvas.worldCamera;
+                break;
+            case RenderMode.WorldSpace:
+                cam = canvas.worldCamera != null ? canvas.worldCamera : Camera.main;
+                break;
+        }
+        //Material
+        colorWheelMat = Instantiate(colorWheel.material);
+        colorWheel.material = colorWheelMat;
     }
     void UpdateMaterialInitialValues()
     {
         colorWheelMat.SetFloat("_StartingAngle", startingAngle);
         colorWheelMat.SetInt("_ColorsCount" , totalNumberofColors);
         colorWheelMat.SetInt("_WheelsCount", wheelsCount);
-
     }
     //presets
     Vector2 centerPoint;
@@ -104,15 +140,12 @@ public class ColorPaletteController : MonoBehaviour, IBeginDragHandler, IDragHan
     //if the palette position/size or Picker position change in runtime, this function should be called 
     void CalculatePresets()
     {
-        //Assuming the canvas is ScreenSpace-Overlay
-        centerPoint=RectTransformUtility.WorldToScreenPoint(null, transform.position);
-        RectTransform rect = GetComponent<RectTransform>();
+        centerPoint = RectTransformUtility.WorldToScreenPoint(cam, transform.position);
         paletteRadius = rect.sizeDelta.x / 2;
         Vector3 pickerLocalPosition = picker.localPosition;
         float angle = Vector2.SignedAngle(Vector2.right, pickerLocalPosition);
         if (angle < 0) angle += 360;
         pickerHueOffset = angle / 360;
-
     }
 
     /// <summary>
@@ -226,6 +259,9 @@ public class ColorPaletteController : MonoBehaviour, IBeginDragHandler, IDragHan
             return;
         dragging = true;
         omega = 0;
+
+        if (!isStationary)
+            CalculatePresets();
     }
     public void OnEndDrag(PointerEventData eventData)
     {
