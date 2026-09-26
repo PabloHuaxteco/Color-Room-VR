@@ -14,11 +14,11 @@ All game code lives in `Assets/Scripts` under the `ColorRoomVR` namespace, split
 
 - **Coloring/** – `PaintableObject` (single mesh, requires MeshRenderer + MeshCollider) and `PaintableGroup` (a set of objects painted together). An object with a `paintableGroup` reference registers itself with the group in `Awake` and skips its own initial-state load; the group loads/saves the color under `groupID` instead of each member's `objectID`. Colors are applied via `MaterialPropertyBlock` on `_BaseColor` (URP Lit), not by modifying materials.
 - **Data/** – `ColorsDataManager` is a singleton holding an `id -> Color` dictionary, saved (debounced by 1s) through `IColorPersistenceService`. `JsonFilePersistenceService` writes JSON to `Application.persistentDataPath/ColorsRoom_{roomID}`. Change `roomID` to use a separate save slot.
-- **Interaction/** – `ObjectDetection` raycasts to find the hovered `PaintableObject`/group and outlines it (via the QuickOutline asset); `PaintVFXManager` handles paint effects. Currently the raycast uses the mouse position (`Input.mousePosition`) as a desktop testing stand-in; the XR controller ray is commented out.
+- **Interaction/** – `ObjectDetection` raycasts from the right controller (`XRRayInteractor` origin, `paintAction` = trigger; optional Editor-only mouse fallback) to find the hovered `PaintableObject`/group and outlines it in the selected palette color (QuickOutline); painting is skipped while the ray is over UI. `PaletteAnchor` keeps the palette canvas on the left hand or pinned in the world (left primary button or the canvas toggle). `PaintVFXManager` handles paint effects.
 - **Reactions/** – `AnimationOnPaint`, `EnableOnPaint`: components wired to `PaintableObject.OnPainted` (UnityEvent) to trigger animations/unlocks.
 
 Key conventions/flow:
-- `SetColor(color, isPlayerAction)`: `isPlayerAction = true` persists the color and fires `OnPainted`; `false` is used for loading saved state. For groups, `OnPainted` fires only on the first member. Saved objects re-fire `OnPainted` on load so reactions re-activate.
+- `SetColor(color, isPlayerAction)`: `isPlayerAction = true` persists the color and fires `OnPainted`; `false` is used for loading saved state. For groups, `OnPainted` fires on the group itself and on every member. Saved objects and groups re-fire `OnPainted` on load so reactions re-activate.
 - Ids (`objectID`/`groupID`) default to the GameObject name in `Reset()`; they are the persistence keys, so renaming them orphans saved colors.
 - `ColorsDataManager.Instance` must exist in the scene before any paintable's `Start`.
 

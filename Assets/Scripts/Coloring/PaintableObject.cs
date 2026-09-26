@@ -36,11 +36,17 @@ namespace ColorRoomVR
 
         private void Awake()
         {
-            _meshRenderer = GetComponent<MeshRenderer>();
-            _mpb = new MaterialPropertyBlock();
+            EnsureInitialized();
 
             if (paintableGroup != null)
                 paintableGroup.AddMember(this);
+        }
+
+        private void EnsureInitialized()
+        {
+            if (_meshRenderer == null)
+                _meshRenderer = GetComponent<MeshRenderer>();
+            _mpb ??= new MaterialPropertyBlock();
         }
 
         private void Reset()
@@ -80,6 +86,8 @@ namespace ColorRoomVR
         /// <param name="isPlayerAction">If true, this action was initiated by the player, saving the color and invoking the OnPainted event.</param>
         public void SetColor(Color color, bool isPlayerAction = true)
         {
+            EnsureInitialized();
+
             if (applyMode == ApplyMode.AllMaterials)
             {
                 for (int i = 0; i < _meshRenderer.sharedMaterials.Length; i++)
@@ -108,14 +116,15 @@ namespace ColorRoomVR
             if (_outline == null)
                 _outline = gameObject.AddComponent<Outline>();
 
-            _outline.OutlineColor = Color.white;
+            _outline.OutlineColor = color;
             _outline.OutlineWidth = 5f;
             _outline.enabled = true;
         }
 
         public void DisableOutline()
         {
-            _outline.enabled = false;
+            if (_outline != null)
+                _outline.enabled = false;
         }
     }
 }
