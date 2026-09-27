@@ -5,6 +5,7 @@ using EditorAttributes;
 
 namespace ColorRoomVR
 {
+    [DefaultExecutionOrder(-100)]
     public class ColorsDataManager : MonoBehaviour
     {
         // Static variables and properties
@@ -42,6 +43,19 @@ namespace ColorRoomVR
         private void Update()
         {
             if (_dirty && Time.time - _lastSaveTime > _saveDelay)
+                SaveColors();
+        }
+
+        private void OnApplicationPause(bool paused)
+        {
+            if (paused) FlushPendingSave();
+        }
+
+        private void OnApplicationQuit() => FlushPendingSave();
+
+        private void FlushPendingSave()
+        {
+            if (_dirty && _persistence != null)
                 SaveColors();
         }
 
