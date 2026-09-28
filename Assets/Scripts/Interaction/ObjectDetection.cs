@@ -49,8 +49,24 @@ namespace ColorRoomVR
             ClearHovered();
         }
 
+        /// <summary>When false, nothing is hovered, outlined or painted (e.g. during the first tutorial steps).</summary>
+        public bool PaintingEnabled
+        {
+            get => _paintingEnabled;
+            set
+            {
+                _paintingEnabled = value;
+                if (!value) ClearHovered();
+            }
+        }
+
+        private bool _paintingEnabled = true;
+
         private void Update()
         {
+            if (!_paintingEnabled)
+                return;
+
             if (TryGetHit(out RaycastHit hit, out bool paintPressed)
                 && hit.collider.TryGetComponent(out PaintableObject obj))
             {

@@ -437,7 +437,7 @@ MonoBehaviour:
   objectID: Candle_With_Base
   color: {r: 1, g: 1, b: 1, a: 1}
   applyMode: 0
-  materialIndex: 0
+  materialIndex: 2
   OnPainted:
     m_PersistentCalls:
       m_Calls: []
