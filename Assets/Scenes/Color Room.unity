@@ -3772,6 +3772,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &598662419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5788274763826013057, guid: 9ed130cef04edd94b93ff8a1832ba302,
+    type: 3}
+  m_PrefabInstance: {fileID: 7127972350030866396}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &602592840
 GameObject:
   m_ObjectHideFlags: 0
@@ -7377,6 +7383,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170539308}
   m_CullTransparentMesh: 0
+--- !u!1 &1181232540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5122183858352693684, guid: 9ed130cef04edd94b93ff8a1832ba302,
+    type: 3}
+  m_PrefabInstance: {fileID: 7127972350030866396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1181232544
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181232540}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 76a86a15b98ad9946a7370681259bc06, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1181589906
 GameObject:
   m_ObjectHideFlags: 0
@@ -12708,6 +12742,34 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 1.4}
   m_SizeDelta: {x: 600, y: 360}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1266842740 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4035242621976189538, guid: 9ed130cef04edd94b93ff8a1832ba302,
+    type: 3}
+  m_PrefabInstance: {fileID: 7127972350030866396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1266842744
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266842740}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 536260159c91244439ded4bf9ff88980, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1283290116 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8234544963092730203, guid: 99dde9ff9f4c4074ea7d133e3b5fb848,
@@ -20176,6 +20238,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloatingShelf
       objectReference: {fileID: 0}
+    - target: {fileID: 8421423962904646318, guid: f171e34c76406514ba8fe01c39d0a576,
+        type: 3}
+      propertyPath: 'objectsToEnable.Array.data[0]'
+      value: 
+      objectReference: {fileID: 598662419}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -21078,6 +21145,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FishTank
       objectReference: {fileID: 0}
+    - target: {fileID: 5788274763826013057, guid: 9ed130cef04edd94b93ff8a1832ba302,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6289814009441762870, guid: 9ed130cef04edd94b93ff8a1832ba302,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21131,7 +21203,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4035242621976189538, guid: 9ed130cef04edd94b93ff8a1832ba302,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1266842744}
+    - targetCorrespondingSourceObject: {fileID: 5122183858352693684, guid: 9ed130cef04edd94b93ff8a1832ba302,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1181232544}
   m_SourcePrefab: {fileID: 100100000, guid: 9ed130cef04edd94b93ff8a1832ba302, type: 3}
 --- !u!4 &7240201137218395997 stripped
 Transform:
