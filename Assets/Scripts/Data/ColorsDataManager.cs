@@ -11,6 +11,9 @@ namespace ColorRoomVR
         // Static variables and properties
         public static ColorsDataManager Instance { get; private set; }
 
+        /// <summary>Fired with the id whenever a color is set by the player.</summary>
+        public event System.Action<string> OnColorChanged;
+
         //Private variables (serialized fields)
         [SerializeField, Min(0)]
         private int roomID = 1;
@@ -40,6 +43,12 @@ namespace ColorRoomVR
             LoadColors();
         }
 
+        private void OnDestroy()
+        {
+            if (Instance == this)
+                Instance = null;
+        }
+
         private void Update()
         {
             if (_dirty && Time.time - _lastSaveTime > _saveDelay)
@@ -61,6 +70,8 @@ namespace ColorRoomVR
 
         public bool TryGetColor(string id, out Color color) => _colors.TryGetValue(id, out color);
 
+        public bool HasColor(string id) => _colors.ContainsKey(id);
+
         public void SetColor(string id, Color color)
         {
             if (string.IsNullOrEmpty(id)) return;
@@ -68,6 +79,14 @@ namespace ColorRoomVR
             _colors[id] = color;
             _dirty = true;
             _lastSaveTime = Time.time;
+            OnColorChanged?.Invoke(id);
+        }
+
+        /// <summary>Deletes every saved color and persists the empty state immediately.</summary>
+        public void ClearAll()
+        {
+            _colors.Clear();
+            SaveColors();
         }
 
         private void SaveColors()
