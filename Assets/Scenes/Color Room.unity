@@ -3218,6 +3218,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449500272}
   m_CullTransparentMesh: 1
+--- !u!1 &450131125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 994596232681344663, guid: 52cf29ef5e699494fa8c8ea1e0d1ba2b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1479481185897743852}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &502856985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17488,6 +17494,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5664838018234783595}
     m_Modifications:
+    - target: {fileID: 450434461285230042, guid: 52cf29ef5e699494fa8c8ea1e0d1ba2b,
+        type: 3}
+      propertyPath: 'objectsToEnable.Array.data[3]'
+      value: 
+      objectReference: {fileID: 450131125}
+    - target: {fileID: 1130111982745702506, guid: 52cf29ef5e699494fa8c8ea1e0d1ba2b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937210618600319969, guid: 52cf29ef5e699494fa8c8ea1e0d1ba2b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2077347320290426482, guid: 52cf29ef5e699494fa8c8ea1e0d1ba2b,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -17557,6 +17578,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958639270425905305, guid: 52cf29ef5e699494fa8c8ea1e0d1ba2b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7702693862131337052, guid: 52cf29ef5e699494fa8c8ea1e0d1ba2b,
         type: 3}
