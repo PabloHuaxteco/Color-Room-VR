@@ -141,6 +141,7 @@ namespace ColorRoomVR
 
             vfxManager?.PlayAt(hit.point, hit.normal, palette.SelectedColor);
             SendPaintHaptic();
+            AudioManager.Instance?.PlayPaint();
             ClearHovered();
         }
 
