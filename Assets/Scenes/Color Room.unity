@@ -14044,6 +14044,53 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1441513449119483784}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1558736873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1558736875}
+  - component: {fileID: 1558736874}
+  m_Layer: 0
+  m_Name: PaintVFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1558736874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558736873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d0b9ca388ca47245accaad38d0c745e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.PaintVFXManager
+  splashPrefab: {fileID: 124593005680667120, guid: 149bfaeef37bf1349a3b55fc3fc6890a,
+    type: 3}
+  poolSize: 8
+--- !u!4 &1558736875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558736873}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1567878712 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2554244596211774842, guid: 0ab6c916f3669f2469665f3f987da3f5,
@@ -14094,7 +14141,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -7560851734690860916, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
-  vfxManager: {fileID: 0}
+  vfxManager: {fileID: 1558736874}
   palette: {fileID: 795561215}
   mouseFallbackInEditor: 0
 --- !u!4 &1577712094
@@ -23701,3 +23748,4 @@ SceneRoots:
   - {fileID: 1250288232}
   - {fileID: 753932394}
   - {fileID: 1181589909}
+  - {fileID: 1558736875}

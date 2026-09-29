@@ -134,7 +134,7 @@ namespace ColorRoomVR
             else
                 return;
 
-            vfxManager?.PlayAt(hit.point, hit.normal);
+            vfxManager?.PlayAt(hit.point, hit.normal, palette.SelectedColor);
             ClearHovered();
         }
 
