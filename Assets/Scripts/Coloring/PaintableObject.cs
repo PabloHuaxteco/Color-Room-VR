@@ -33,6 +33,8 @@ namespace ColorRoomVR
         public string ObjectID => objectID;
         public bool IsPartOfGroup => paintableGroup != null;
         public PaintableGroup Group => paintableGroup;
+        /// <summary>True only while OnPainted is being invoked for a paint made by the player (false when restoring a save).</summary>
+        public bool LastPaintByPlayer { get; private set; }
 
         private void Awake()
         {
@@ -71,7 +73,7 @@ namespace ColorRoomVR
                 SetColor(saved, false);
                 // If an object is already painted on load, we should also trigger its event
                 // to ensure animations/unlocks are activated correctly.
-                OnPainted?.Invoke();
+                NotifyPainted(false);
             }
             else
             {
@@ -107,8 +109,17 @@ namespace ColorRoomVR
             if (isPlayerAction)
             {
                 ColorsDataManager.Instance.SetColor(objectID, color);
-                OnPainted?.Invoke();
+                NotifyPainted(true);
             }
+        }
+
+        // Invokes OnPainted with LastPaintByPlayer set only for the duration of the call.
+        // Also used by PaintableGroup to notify its members.
+        internal void NotifyPainted(bool byPlayer)
+        {
+            LastPaintByPlayer = byPlayer;
+            try { OnPainted?.Invoke(); }
+            finally { LastPaintByPlayer = false; }
         }
 
         public void EnableOutline(Color color)
