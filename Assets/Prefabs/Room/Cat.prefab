@@ -442,15 +442,14 @@ MonoBehaviour:
   target: {fileID: 850482165570290147}
   label: {fileID: 6056929345279492453}
   messages:
-  - Meow
+  - Mmm...
   - Zzzz
   - Zzz...
-  - Mmm...
+  - Meow
   - Zzzz
   - Zzz...
   secondsPerMessage: 3
   meowClip: {fileID: 8300000, guid: ae6df576c7a9b3342934dfd3c69206a4, type: 3}
-  meowMessage: Meow
 --- !u!114 &3477542178069638871
 MonoBehaviour:
   m_ObjectHideFlags: 0
