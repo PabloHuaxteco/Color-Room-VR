@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 896316894855097197}
   - component: {fileID: 2696697850721054932}
   - component: {fileID: 2839686121170672143}
+  - component: {fileID: 1714046154535328116}
   m_Layer: 0
   m_Name: WallPaint_2
   m_TagString: Untagged
@@ -152,3 +153,18 @@ MonoBehaviour:
   duration: 0.4
   vibrato: 6
   elasticity: 0.6
+--- !u!114 &1714046154535328116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463309244174087661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9beb532cdd5997a4f9dd397409e56b00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.FadeInOnPaint
+  target: {fileID: 2696697850721054932}
+  picture: {fileID: 0}
+  duration: 0.8

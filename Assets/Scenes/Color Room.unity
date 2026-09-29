@@ -17728,6 +17728,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7240201137218395997}
     m_Modifications:
+    - target: {fileID: 642857417925232280, guid: 04bbf820af4bf7e45b1b00bd67a9614a,
+        type: 3}
+      propertyPath: picture
+      value: 
+      objectReference: {fileID: 516088613}
     - target: {fileID: 6234697142634880117, guid: 04bbf820af4bf7e45b1b00bd67a9614a,
         type: 3}
       propertyPath: m_Name
@@ -17815,6 +17820,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3804743272956929275}
     m_Modifications:
+    - target: {fileID: 5498972998417271390, guid: 52f3b6e581c023c4fa454c3592486897,
+        type: 3}
+      propertyPath: picture
+      value: 
+      objectReference: {fileID: 1875689421}
     - target: {fileID: 7539443241261313162, guid: 52f3b6e581c023c4fa454c3592486897,
         type: 3}
       propertyPath: m_Name
@@ -18744,6 +18754,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallPaint_3
       objectReference: {fileID: 0}
+    - target: {fileID: 6826958881513915434, guid: 251771f9b47efa94287f89bda196a04a,
+        type: 3}
+      propertyPath: picture
+      value: 
+      objectReference: {fileID: 2026169919}
     - target: {fileID: 9060594644502280353, guid: 251771f9b47efa94287f89bda196a04a,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -21747,6 +21762,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4031064053924117800, guid: d367443b52a999e4c88118cef82432ff,
+        type: 3}
+      propertyPath: picture
+      value: 
+      objectReference: {fileID: 1941196082}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -22836,6 +22856,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallPaint_2
       objectReference: {fileID: 0}
+    - target: {fileID: 1714046154535328116, guid: 1fcbbe2242e5d4142bb5fca8371376ff,
+        type: 3}
+      propertyPath: picture
+      value: 
+      objectReference: {fileID: 514133361}
     - target: {fileID: 1897864296014012430, guid: 1fcbbe2242e5d4142bb5fca8371376ff,
         type: 3}
       propertyPath: m_LocalScale.x
