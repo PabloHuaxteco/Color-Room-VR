@@ -125,6 +125,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7722922083123966481}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &20083977 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6673145715119198442, guid: 9c28cf178cf0de3438990398eb50d35e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4009346431959434782}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &48364968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3438,6 +3450,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517836794}
   m_CullTransparentMesh: 0
+--- !u!114 &520720842 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4002100742735266353, guid: 656f71bd02713dc4b80c9e9d944fcbca,
+    type: 3}
+  m_PrefabInstance: {fileID: 4709346270573497246}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &548079636
 GameObject:
   m_ObjectHideFlags: 0
@@ -4463,6 +4487,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688169831}
   m_CullTransparentMesh: 1
+--- !u!114 &725545287 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1371438122684591071, guid: 54d9e8dcded98a4409598c6367329235,
+    type: 3}
+  m_PrefabInstance: {fileID: 5397590897845087689}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &737449596
 GameObject:
   m_ObjectHideFlags: 0
@@ -6496,6 +6532,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858845542}
   m_CullTransparentMesh: 1
+--- !u!1 &872366001 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2382151658918492881, guid: 656f71bd02713dc4b80c9e9d944fcbca,
+    type: 3}
+  m_PrefabInstance: {fileID: 4709346270573497246}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &875206862
 GameObject:
   m_ObjectHideFlags: 0
@@ -6853,6 +6895,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1002096861}
+  - component: {fileID: 1002096862}
   m_Layer: 0
   m_Name: Wall_East
   m_TagString: Untagged
@@ -6879,6 +6922,21 @@ Transform:
   - {fileID: 201910665}
   m_Father: {fileID: 514969962747063730}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1002096862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002096860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9879a999d402d4c46b9ed48f6c060aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.EnableOnPaint
+  objectsToEnable: []
+  target: {fileID: 1428418485}
+  groupTarget: {fileID: 0}
 --- !u!1 &1111588647
 GameObject:
   m_ObjectHideFlags: 0
@@ -12794,6 +12852,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1667977209}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1300314311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5541233806580681942, guid: 035902d37fb689e4face91006123f62f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6927100261177995100}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1313417255
 GameObject:
   m_ObjectHideFlags: 0
@@ -12937,6 +13001,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
+--- !u!1 &1412457802 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3760664706528679991, guid: 2acfd00650e293046a85253fc62b94af,
+    type: 3}
+  m_PrefabInstance: {fileID: 102334905000767210}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1419510833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13030,6 +13100,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7784413525708280798, guid: e244994860c9d1e41a13047ac19b4623,
     type: 3}
   m_PrefabInstance: {fileID: 1419510833}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1426315072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3637567512011620140, guid: f70fff81c71d8ab4589733e8d9a58c5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3257859776456711718}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1428418480
 GameObject:
@@ -13367,6 +13443,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451706238}
   m_CullTransparentMesh: 0
+--- !u!114 &1489313485 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7496753921902963633, guid: 0ab6c916f3669f2469665f3f987da3f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 5352389272186590204}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c254514f4a89341a1ec6dff66d6bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1514946869
 GameObject:
   m_ObjectHideFlags: 0
@@ -13673,6 +13761,12 @@ Transform:
   - {fileID: 969933080}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1553822323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2038424518598076886, guid: 17fa3fa407544d547a8a80efaa811849,
+    type: 3}
+  m_PrefabInstance: {fileID: 1441513449119483784}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1577712092
 GameObject:
   m_ObjectHideFlags: 0
@@ -14359,6 +14453,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690677950}
   m_CullTransparentMesh: 1
+--- !u!1 &1717634355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9163352211147137381, guid: 9c28cf178cf0de3438990398eb50d35e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4009346431959434782}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1731747009
 GameObject:
   m_ObjectHideFlags: 0
@@ -15356,6 +15456,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1843708532}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1856782915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2945342342552923241, guid: 035902d37fb689e4face91006123f62f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6927100261177995100}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1857983005
 GameObject:
   m_ObjectHideFlags: 0
@@ -15607,6 +15713,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1920468107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3244119194351127939, guid: 0ab6c916f3669f2469665f3f987da3f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 5352389272186590204}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1941196080
 GameObject:
   m_ObjectHideFlags: 0
@@ -16220,6 +16332,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &2030352181 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6114583747149420344, guid: 54d9e8dcded98a4409598c6367329235,
+    type: 3}
+  m_PrefabInstance: {fileID: 5397590897845087689}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2031935757
 GameObject:
   m_ObjectHideFlags: 0
@@ -16823,7 +16941,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 502856986}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3760664706528679991, guid: 2acfd00650e293046a85253fc62b94af,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4664261299233997796}
   m_SourcePrefab: {fileID: 100100000, guid: 2acfd00650e293046a85253fc62b94af, type: 3}
 --- !u!4 &116432475020332217 stripped
 Transform:
@@ -17100,11 +17222,8 @@ Transform:
   - {fileID: 543450651875838483}
   - {fileID: 6138687584702968468}
   - {fileID: 1388678307340449557}
-  - {fileID: 2015770202914656185}
   - {fileID: 6550087668983668614}
-  - {fileID: 9135200066872164222}
   - {fileID: 4664261299233997791}
-  - {fileID: 2399905663808980543}
   - {fileID: 3804743272956929275}
   - {fileID: 7614905129667998090}
   - {fileID: 1002096861}
@@ -17266,6 +17385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2107153163732992313}
   - component: {fileID: 2107153163732992314}
+  - component: {fileID: 2107153163732992315}
   m_Layer: 0
   m_Name: PaperBalls
   m_TagString: Untagged
@@ -17437,7 +17557,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1283290116}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2038424518598076886, guid: 17fa3fa407544d547a8a80efaa811849,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7744270682939284894}
   m_SourcePrefab: {fileID: 100100000, guid: 17fa3fa407544d547a8a80efaa811849, type: 3}
 --- !u!1001 &1479481185897743852
 PrefabInstance:
@@ -18006,6 +18130,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6927100261177995100}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1778630709828149687 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6222741206132193892, guid: 035902d37fb689e4face91006123f62f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6927100261177995100}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856782915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c254514f4a89341a1ec6dff66d6bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1778630709828149692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856782915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9879a999d402d4c46b9ed48f6c060aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.EnableOnPaint
+  objectsToEnable: []
+  target: {fileID: 0}
+  groupTarget: {fileID: 1778630709828149687}
 --- !u!4 &2015770202914656185 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1478099659806923163, guid: 7c482ca48240d81468343a7760d5b075,
@@ -18107,6 +18258,22 @@ MonoBehaviour:
   OnPainted:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2107153163732992315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226130744922006510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ca7c9d7aaac304db683bb94fa890ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.PunchOnEnable
+  punch: {x: 0.2, y: 0.2, z: 0.2}
+  duration: 0.4
+  vibrato: 6
+  elasticity: 0.6
 --- !u!1001 &2248746257796832978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18977,7 +19144,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1419510834}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3637567512011620140, guid: f70fff81c71d8ab4589733e8d9a58c5b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5664838018234783597}
   m_SourcePrefab: {fileID: 100100000, guid: f70fff81c71d8ab4589733e8d9a58c5b, type: 3}
 --- !u!1001 &3357415370544686428
 PrefabInstance:
@@ -19164,6 +19335,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5397590897845087689}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3804743272956929276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030352181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9879a999d402d4c46b9ed48f6c060aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.EnableOnPaint
+  objectsToEnable: []
+  target: {fileID: 725545287}
+  groupTarget: {fileID: 0}
 --- !u!1001 &3834706517589018139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19362,7 +19548,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3990994310829560980}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9163352211147137381, guid: 9c28cf178cf0de3438990398eb50d35e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7501271205552722371}
   m_SourcePrefab: {fileID: 100100000, guid: 9c28cf178cf0de3438990398eb50d35e, type: 3}
 --- !u!4 &4121900502386792557 stripped
 Transform:
@@ -19479,6 +19669,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 102334905000767210}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4664261299233997792 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3972608049793036197, guid: 2acfd00650e293046a85253fc62b94af,
+    type: 3}
+  m_PrefabInstance: {fileID: 102334905000767210}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412457802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4664261299233997796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412457802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9879a999d402d4c46b9ed48f6c060aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.EnableOnPaint
+  objectsToEnable: []
+  target: {fileID: 4664261299233997792}
+  groupTarget: {fileID: 0}
 --- !u!1001 &4709346270573497246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19581,7 +19798,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4712894401688989076}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2382151658918492881, guid: 656f71bd02713dc4b80c9e9d944fcbca,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7614905129667998091}
   m_SourcePrefab: {fileID: 100100000, guid: 656f71bd02713dc4b80c9e9d944fcbca, type: 3}
 --- !u!4 &4712894401688989076 stripped
 Transform:
@@ -19735,6 +19956,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6927100261177995100}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5208749497771529168 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5062164147337707752, guid: 035902d37fb689e4face91006123f62f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6927100261177995100}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300314311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5208749497771529172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300314311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9879a999d402d4c46b9ed48f6c060aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.EnableOnPaint
+  objectsToEnable: []
+  target: {fileID: 5208749497771529168}
+  groupTarget: {fileID: 0}
 --- !u!1001 &5352389272186590204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19940,7 +20188,19 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6932932189494730499}
-    m_AddedComponents: []
+    - targetCorrespondingSourceObject: {fileID: 7705656075780343565, guid: 0ab6c916f3669f2469665f3f987da3f5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2015770202914656185}
+    - targetCorrespondingSourceObject: {fileID: 7705656075780343565, guid: 0ab6c916f3669f2469665f3f987da3f5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9135200066872164222}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3244119194351127939, guid: 0ab6c916f3669f2469665f3f987da3f5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7447507422361608905}
   m_SourcePrefab: {fileID: 100100000, guid: 0ab6c916f3669f2469665f3f987da3f5, type: 3}
 --- !u!1001 &5397590897845087689
 PrefabInstance:
@@ -20050,7 +20310,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3218680946926566580}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6114583747149420344, guid: 54d9e8dcded98a4409598c6367329235,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3804743272956929276}
   m_SourcePrefab: {fileID: 100100000, guid: 54d9e8dcded98a4409598c6367329235, type: 3}
 --- !u!1001 &5530647891923410835
 PrefabInstance:
@@ -20417,6 +20681,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3257859776456711718}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5664838018234783596 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4947608968502054619, guid: f70fff81c71d8ab4589733e8d9a58c5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3257859776456711718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426315072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c254514f4a89341a1ec6dff66d6bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5664838018234783597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426315072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9879a999d402d4c46b9ed48f6c060aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.EnableOnPaint
+  objectsToEnable: []
+  target: {fileID: 0}
+  groupTarget: {fileID: 5664838018234783596}
 --- !u!1001 &5740182205437757211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21159,6 +21450,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 62076725260181716}
+    - targetCorrespondingSourceObject: {fileID: 8560422469785879391, guid: 035902d37fb689e4face91006123f62f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2399905663808980543}
     - targetCorrespondingSourceObject: {fileID: 5262246730978210158, guid: 035902d37fb689e4face91006123f62f,
         type: 3}
       insertIndex: -1
@@ -21183,7 +21478,15 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3510232475953170360}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2945342342552923241, guid: 035902d37fb689e4face91006123f62f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1778630709828149692}
+    - targetCorrespondingSourceObject: {fileID: 5541233806580681942, guid: 035902d37fb689e4face91006123f62f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5208749497771529172}
   m_SourcePrefab: {fileID: 100100000, guid: 035902d37fb689e4face91006123f62f, type: 3}
 --- !u!4 &6932932189494730499 stripped
 Transform:
@@ -21531,6 +21834,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5352389272186590204}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7447507422361608905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920468107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9879a999d402d4c46b9ed48f6c060aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.EnableOnPaint
+  objectsToEnable: []
+  target: {fileID: 0}
+  groupTarget: {fileID: 1489313485}
 --- !u!1 &7476571660805985520
 GameObject:
   m_ObjectHideFlags: 0
@@ -21571,6 +21889,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4009346431959434782}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7501271205552722371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717634355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9879a999d402d4c46b9ed48f6c060aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.EnableOnPaint
+  objectsToEnable: []
+  target: {fileID: 20083977}
+  groupTarget: {fileID: 0}
 --- !u!1001 &7511000822873559094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21722,6 +22055,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4709346270573497246}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7614905129667998091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872366001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9879a999d402d4c46b9ed48f6c060aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.EnableOnPaint
+  objectsToEnable: []
+  target: {fileID: 520720842}
+  groupTarget: {fileID: 0}
 --- !u!1001 &7682876789052224171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21903,6 +22251,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1441513449119483784}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7744270682939284890 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9180437383389614119, guid: 17fa3fa407544d547a8a80efaa811849,
+    type: 3}
+  m_PrefabInstance: {fileID: 1441513449119483784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553822323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7744270682939284894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553822323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9879a999d402d4c46b9ed48f6c060aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.EnableOnPaint
+  objectsToEnable: []
+  target: {fileID: 7744270682939284890}
+  groupTarget: {fileID: 0}
 --- !u!4 &7845617592602670239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9126111337265484355, guid: 52f3b6e581c023c4fa454c3592486897,
@@ -22511,42 +22886,42 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514969962747063730}
+    m_TransformParent: {fileID: 1778630709828149686}
     m_Modifications:
     - target: {fileID: 400052461379203144, guid: d15fd9f3d50211e468b22dc63bd6732a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.342
+      value: 0.036415465
       objectReference: {fileID: 0}
     - target: {fileID: 400052461379203144, guid: d15fd9f3d50211e468b22dc63bd6732a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.048389934
+      value: -0.17307907
       objectReference: {fileID: 0}
     - target: {fileID: 400052461379203144, guid: d15fd9f3d50211e468b22dc63bd6732a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.445
+      value: 0.16674267
       objectReference: {fileID: 0}
     - target: {fileID: 400052461379203144, guid: d15fd9f3d50211e468b22dc63bd6732a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.6861995
       objectReference: {fileID: 0}
     - target: {fileID: 400052461379203144, guid: d15fd9f3d50211e468b22dc63bd6732a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.000000037748947
+      value: 0.000000014997365
       objectReference: {fileID: 0}
     - target: {fileID: 400052461379203144, guid: d15fd9f3d50211e468b22dc63bd6732a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7274134
       objectReference: {fileID: 0}
     - target: {fileID: 400052461379203144, guid: d15fd9f3d50211e468b22dc63bd6732a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.000000070816306
       objectReference: {fileID: 0}
     - target: {fileID: 400052461379203144, guid: d15fd9f3d50211e468b22dc63bd6732a,
         type: 3}
@@ -22583,22 +22958,22 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514969962747063730}
+    m_TransformParent: {fileID: 7447507422361608904}
     m_Modifications:
     - target: {fileID: 1478099659806923163, guid: 7c482ca48240d81468343a7760d5b075,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.423278
+      value: 0.07941502
       objectReference: {fileID: 0}
     - target: {fileID: 1478099659806923163, guid: 7c482ca48240d81468343a7760d5b075,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1328
+      value: 0.0020999603
       objectReference: {fileID: 0}
     - target: {fileID: 1478099659806923163, guid: 7c482ca48240d81468343a7760d5b075,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1687
+      value: 0.40416795
       objectReference: {fileID: 0}
     - target: {fileID: 1478099659806923163, guid: 7c482ca48240d81468343a7760d5b075,
         type: 3}
@@ -22608,12 +22983,12 @@ PrefabInstance:
     - target: {fileID: 1478099659806923163, guid: 7c482ca48240d81468343a7760d5b075,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
+      value: 0.00000005960464
       objectReference: {fileID: 0}
     - target: {fileID: 1478099659806923163, guid: 7c482ca48240d81468343a7760d5b075,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1478099659806923163, guid: 7c482ca48240d81468343a7760d5b075,
         type: 3}
@@ -22772,7 +23147,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514969962747063730}
+    m_TransformParent: {fileID: 7447507422361608904}
     m_Modifications:
     - target: {fileID: 6592393341535380620, guid: 10b25f15e09911846b8f0e46210a47b7,
         type: 3}
@@ -22781,18 +23156,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6875114812155427893, guid: 10b25f15e09911846b8f0e46210a47b7,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875114812155427893, guid: 10b25f15e09911846b8f0e46210a47b7,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875114812155427893, guid: 10b25f15e09911846b8f0e46210a47b7,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.13682434
+      value: -0.20703864
       objectReference: {fileID: 0}
     - target: {fileID: 6875114812155427893, guid: 10b25f15e09911846b8f0e46210a47b7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0323
+      value: -0.098400034
       objectReference: {fileID: 0}
     - target: {fileID: 6875114812155427893, guid: 10b25f15e09911846b8f0e46210a47b7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0366
+      value: 0.27206796
       objectReference: {fileID: 0}
     - target: {fileID: 6875114812155427893, guid: 10b25f15e09911846b8f0e46210a47b7,
         type: 3}
@@ -22802,7 +23187,7 @@ PrefabInstance:
     - target: {fileID: 6875114812155427893, guid: 10b25f15e09911846b8f0e46210a47b7,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000021288647
+      value: 0.00000005805819
       objectReference: {fileID: 0}
     - target: {fileID: 6875114812155427893, guid: 10b25f15e09911846b8f0e46210a47b7,
         type: 3}
@@ -22812,7 +23197,7 @@ PrefabInstance:
     - target: {fileID: 6875114812155427893, guid: 10b25f15e09911846b8f0e46210a47b7,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000049462052
+      value: -0.000000003596834
       objectReference: {fileID: 0}
     - target: {fileID: 6875114812155427893, guid: 10b25f15e09911846b8f0e46210a47b7,
         type: 3}

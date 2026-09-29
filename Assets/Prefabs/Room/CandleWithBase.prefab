@@ -408,6 +408,7 @@ GameObject:
   - component: {fileID: 2077347320290426482}
   - component: {fileID: 450434461285230042}
   - component: {fileID: 241149909034041529}
+  - component: {fileID: 4295172196610677124}
   m_Layer: 0
   m_Name: CandleWithBase
   m_TagString: Untagged
@@ -471,6 +472,22 @@ MonoBehaviour:
   baseIntensity: 0.1
   amplitude: 0.05
   speed: 3
+--- !u!114 &4295172196610677124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7702693862131337052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ca7c9d7aaac304db683bb94fa890ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.PunchOnEnable
+  punch: {x: 0.2, y: 0.2, z: 0.2}
+  duration: 0.4
+  vibrato: 6
+  elasticity: 0.6
 --- !u!1 &7825861889918742596
 GameObject:
   m_ObjectHideFlags: 0

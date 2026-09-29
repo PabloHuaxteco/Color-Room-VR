@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4827002079637359153}
   - component: {fileID: 4860881571861949432}
+  - component: {fileID: 996716228381183184}
   m_Layer: 0
   m_Name: Fan
   m_TagString: Untagged
@@ -84,6 +85,22 @@ MonoBehaviour:
   pivot: {fileID: 712620659865010517}
   axis: {x: 0, y: 1, z: 0}
   degreesPerSecond: 360
+--- !u!114 &996716228381183184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864558569450351599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ca7c9d7aaac304db683bb94fa890ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.PunchOnEnable
+  punch: {x: 0.2, y: 0.2, z: 0.2}
+  duration: 0.4
+  vibrato: 6
+  elasticity: 0.6
 --- !u!1 &4288424421916465365
 GameObject:
   m_ObjectHideFlags: 0
