@@ -12,13 +12,12 @@ namespace ColorRoomVR
         public static AudioManager Instance { get; private set; }
 
         // Private serialized fields
-        [Tooltip("Paint sound variants. One is picked at random each time the player paints.")]
-        [SerializeField] private AudioClip[] paintClips;
-        [SerializeField] private AudioClip uiClick;
-        [SerializeField] private AudioClip uiHover;
-        [SerializeField] private AudioClip roomComplete;
+        [Tooltip("Paint sound. Use pitch for variants.")]
+        [SerializeField] private AudioClip paint;
         [Tooltip("Random pitch offset (+/-) applied to paint sounds.")]
         [SerializeField, Range(0f, 0.3f)] private float pitchVariation = 0.1f;
+        [SerializeField] private AudioClip uiClick;
+        [SerializeField] private AudioClip roomComplete;
 
         // Private fields
         private const int PaintSourceCount = 4;
@@ -61,35 +60,29 @@ namespace ColorRoomVR
 
         public void PlayPaint()
         {
-            if (paintClips == null || paintClips.Length == 0 || _paintSources == null)
-                return;
-
-            var clip = paintClips[Random.Range(0, paintClips.Length)];
-            if (clip == null)
+            if (paint == null || _paintSources == null)
                 return;
 
             var source = _paintSources[_nextPaintSource];
             _nextPaintSource = (_nextPaintSource + 1) % _paintSources.Length;
             source.pitch = 1f + Random.Range(-pitchVariation, pitchVariation);
-            source.PlayOneShot(clip);
+            source.PlayOneShot(paint, 0.3f);
         }
 
-        public void PlayUIClick() => Play(uiClick);
+        public void PlayUIClick() => Play(uiClick, volume: 0.3f);
 
-        public void PlayUIHover() => Play(uiHover);
-
-        public void PlayRoomComplete() => Play(roomComplete);
+        public void PlayRoomComplete() => Play(roomComplete, volume: 0.6f);
 
         /// <summary>Plays a clip once. Plays in 2D when position is null, otherwise at that world position.</summary>
-        public void Play(AudioClip clip, Vector3? position = null)
+        public void Play(AudioClip clip, Vector3? position = null, float volume = 1)
         {
             if (clip == null)
                 return;
 
             if (position.HasValue)
-                AudioSource.PlayClipAtPoint(clip, position.Value);
+                AudioSource.PlayClipAtPoint(clip, position.Value, volume);
             else if (_sfxSource != null)
-                _sfxSource.PlayOneShot(clip);
+                _sfxSource.PlayOneShot(clip, volume);
         }
     }
 }

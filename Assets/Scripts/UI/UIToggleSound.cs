@@ -10,19 +10,13 @@ namespace ColorRoomVR
     /// ToggleGroup deselections stay silent.
     /// </summary>
     [RequireComponent(typeof(Toggle))]
-    public class UIToggleSound : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
+    public class UIToggleSound : MonoBehaviour, IPointerClickHandler
     {
         private Toggle _toggle;
 
         private void Awake()
         {
             _toggle = GetComponent<Toggle>();
-        }
-
-        public void OnPointerEnter(PointerEventData eventData)
-        {
-            if (_toggle.IsInteractable())
-                AudioManager.Instance?.PlayUIHover();
         }
 
         public void OnPointerClick(PointerEventData eventData)

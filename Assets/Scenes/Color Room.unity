@@ -1850,11 +1850,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf017163888f0a247b5f22402f673f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.AudioManager
-  paintClips: []
-  uiClick: {fileID: 0}
-  uiHover: {fileID: 0}
-  roomComplete: {fileID: 0}
+  paint: {fileID: 8300000, guid: 46c3857e4d04ad04386157c2b5e343b7, type: 3}
   pitchVariation: 0.1
+  uiClick: {fileID: 8300000, guid: 13e6eade39b8eb74b91ff66c33e23a6c, type: 3}
+  roomComplete: {fileID: 8300000, guid: df990207db8955d40a66d53a4109b777, type: 3}
 --- !u!4 &306250084
 Transform:
   m_ObjectHideFlags: 0
@@ -18671,8 +18670,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8548158178463139949, guid: a378edad50e016c41ae78738a80c9649,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2385718508768495168}
   m_SourcePrefab: {fileID: 100100000, guid: a378edad50e016c41ae78738a80c9649, type: 3}
+--- !u!114 &1650530489960199111 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6746870865881497974, guid: a378edad50e016c41ae78738a80c9649,
+    type: 3}
+  m_PrefabInstance: {fileID: 1650530489960199110}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5103fbd0a507449b624de28ccbba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.PaintableObject
+--- !u!1 &1650530489960199112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8548158178463139949, guid: a378edad50e016c41ae78738a80c9649,
+    type: 3}
+  m_PrefabInstance: {fileID: 1650530489960199110}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1716432806151947963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19090,6 +19111,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1650530489960199110}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2385718508768495168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650530489960199112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8aa8913288bcc549a88647ba8ceb329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.SoundOnPaint
+  target: {fileID: 1650530489960199111}
+  groupTarget: {fileID: 0}
+  clip: {fileID: 8300000, guid: 4a0214e900c716d4397cd4713dca34f2, type: 3}
 --- !u!4 &2399905663808980543 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400052461379203144, guid: d15fd9f3d50211e468b22dc63bd6732a,

@@ -6,7 +6,7 @@ namespace ColorRoomVR
 {
     /// <summary>Plays the AudioManager's UI click and hover sounds for the Button on this object.</summary>
     [RequireComponent(typeof(Button))]
-    public class UIButtonSound : MonoBehaviour, IPointerEnterHandler
+    public class UIButtonSound : MonoBehaviour
     {
         private Button _button;
 
@@ -28,12 +28,6 @@ namespace ColorRoomVR
         private void OnClick()
         {
             AudioManager.Instance?.PlayUIClick();
-        }
-
-        public void OnPointerEnter(PointerEventData eventData)
-        {
-            if (_button.IsInteractable())
-                AudioManager.Instance?.PlayUIHover();
         }
     }
 }
