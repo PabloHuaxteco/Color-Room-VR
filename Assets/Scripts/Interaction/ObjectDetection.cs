@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 using UnityEngine.XR.Interaction.Toolkit.Interactors.Visuals;
 
@@ -16,6 +17,10 @@ namespace ColorRoomVR
         [SerializeField] private InputActionProperty paintAction;
         [SerializeField] private PaintVFXManager vfxManager;
         [SerializeField] private ColorPaletteController palette;
+        [Header("Haptics")]
+        [Tooltip("Haptic pulse sent to the painting controller when the player paints.")]
+        [SerializeField, Range(0f, 1f)] private float hapticAmplitude = 0.5f;
+        [SerializeField, Min(0f)] private float hapticDuration = 0.1f;
 #if UNITY_EDITOR
         [Tooltip("Editor only: raycast from the mouse and paint with left click instead of the controller.")]
         [SerializeField] private bool mouseFallbackInEditor;
@@ -135,7 +140,22 @@ namespace ColorRoomVR
                 return;
 
             vfxManager?.PlayAt(hit.point, hit.normal, palette.SelectedColor);
+            SendPaintHaptic();
             ClearHovered();
+        }
+
+        // Only sends the pulse when a real right-hand XR device supports haptics. Skipping otherwise avoids
+        // XRI's "Failed to get haptic capabilities" warning for simulated controllers (no XR device) and no-headset runs.
+        private void SendPaintHaptic()
+        {
+            if (rayInteractor == null || hapticDuration <= 0f)
+                return;
+
+            var device = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+            if (!device.isValid || !device.TryGetHapticCapabilities(out var caps) || !caps.supportsImpulse)
+                return;
+
+            rayInteractor.SendHapticImpulse(hapticAmplitude, hapticDuration);
         }
 
         private void OnPaletteColorChanged(Color color)
