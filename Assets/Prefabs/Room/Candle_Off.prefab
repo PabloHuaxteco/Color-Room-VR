@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8838534672746057419}
   - component: {fileID: 2706456497184533815}
   - component: {fileID: 1631676954135548107}
+  - component: {fileID: 8575234091255565225}
   m_Layer: 0
   m_Name: Candle_Off
   m_TagString: Untagged
@@ -115,3 +116,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6329295755384188349, guid: ba42f7ddb56f3f243993978b613a7a33, type: 3}
+--- !u!114 &8575234091255565225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165291950750520113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ca7c9d7aaac304db683bb94fa890ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.PunchOnEnable
+  punch: {x: 0.2, y: 0.2, z: 0.2}
+  duration: 0.4
+  vibrato: 6
+  elasticity: 0.6
