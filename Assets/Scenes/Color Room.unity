@@ -1795,6 +1795,55 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2123078781}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &306250082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 306250084}
+  - component: {fileID: 306250083}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &306250083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306250082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf017163888f0a247b5f22402f673f70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.AudioManager
+  paintClips: []
+  uiClick: {fileID: 0}
+  uiHover: {fileID: 0}
+  roomComplete: {fileID: 0}
+  pitchVariation: 0.1
+--- !u!4 &306250084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306250082}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &310871478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14143,6 +14192,8 @@ MonoBehaviour:
       type: 3}
   vfxManager: {fileID: 1558736874}
   palette: {fileID: 795561215}
+  hapticAmplitude: 0.5
+  hapticDuration: 0.1
   mouseFallbackInEditor: 0
 --- !u!4 &1577712094
 Transform:
@@ -23742,10 +23793,11 @@ SceneRoots:
   - {fileID: 514969962747063730}
   - {fileID: 1518176111}
   - {fileID: 1208423742}
+  - {fileID: 1558736875}
+  - {fileID: 306250084}
   - {fileID: 1577712094}
   - {fileID: 548079640}
   - {fileID: 1731747015}
   - {fileID: 1250288232}
   - {fileID: 753932394}
   - {fileID: 1181589909}
-  - {fileID: 1558736875}
