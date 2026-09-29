@@ -26,12 +26,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2283962009075879173}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000059604638, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.007466545, y: -0.02006956, z: 0.0034130476}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0001274012, y: 0.009014151, z: -0.005007853}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8905131832668095919}
+  m_Father: {fileID: 1880631753355741671}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2138808763764779304
 MeshFilter:
@@ -100,6 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8905131832668095919}
   - component: {fileID: 1565223666098145751}
+  - component: {fileID: 5390317656282141391}
   m_Layer: 0
   m_Name: Flowerpot
   m_TagString: Untagged
@@ -122,8 +123,6 @@ Transform:
   m_Children:
   - {fileID: 1499690615806234208}
   - {fileID: 1880631753355741671}
-  - {fileID: 2614036054324001511}
-  - {fileID: 7634938432408741234}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1565223666098145751
@@ -142,6 +141,22 @@ MonoBehaviour:
   duration: 0.4
   vibrato: 6
   elasticity: 0.6
+--- !u!114 &5390317656282141391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2433544899835522400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9879a999d402d4c46b9ed48f6c060aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.EnableOnPaint
+  objectsToEnable:
+  - {fileID: 8939568686361062374}
+  target: {fileID: 6320228398290466675}
+  groupTarget: {fileID: 0}
 --- !u!1 &2987096006041788306
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,12 +183,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2987096006041788306}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000059604638, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0026675032, y: 0.0006489759, z: 0.000026626587}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0049264394, y: 0.029732667, z: -0.008394289}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8905131832668095919}
+  m_Father: {fileID: 1880631753355741671}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8220162348637508741
 MeshFilter:
@@ -377,6 +392,7 @@ GameObject:
   - component: {fileID: 1880631753355741671}
   - component: {fileID: 2110610821924152200}
   - component: {fileID: 8930369616251501746}
+  - component: {fileID: 1754889493350567634}
   m_Layer: 0
   m_Name: Leaves_Big
   m_TagString: Untagged
@@ -396,7 +412,9 @@ Transform:
   m_LocalPosition: {x: -0.007593956, y: -0.02908369, z: 0.008420906}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2614036054324001511}
+  - {fileID: 7634938432408741234}
   m_Father: {fileID: 8905131832668095919}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2110610821924152200
@@ -456,3 +474,19 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1754889493350567634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8939568686361062374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ca7c9d7aaac304db683bb94fa890ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.PunchOnEnable
+  punch: {x: 0.2, y: 0.2, z: 0.2}
+  duration: 0.4
+  vibrato: 6
+  elasticity: 0.6
