@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 64650968}
   - component: {fileID: 64650970}
   - component: {fileID: 64650969}
+  - component: {fileID: 64650971}
   m_Layer: 5
   m_Name: Toggle (1)
   m_TagString: Untagged
@@ -255,9 +256,9 @@ RectTransform:
   - {fileID: 1155710563}
   m_Father: {fileID: 217157252}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -38.100006}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &64650969
@@ -338,6 +339,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
+--- !u!114 &64650971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64650967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14957f28edf8ff4196ba0df5bd1c665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.UIToggleSound
 --- !u!1 &75226657 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8462018004270263609, guid: 99dde9ff9f4c4074ea7d133e3b5fb848,
@@ -354,6 +367,7 @@ GameObject:
   m_Component:
   - component: {fileID: 100020679}
   - component: {fileID: 100020678}
+  - component: {fileID: 100020680}
   m_Layer: 5
   m_Name: PinToWorldToggle
   m_TagString: Untagged
@@ -442,6 +456,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -10}
   m_SizeDelta: {x: 276, y: 50}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &100020680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100020677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14957f28edf8ff4196ba0df5bd1c665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.UIToggleSound
 --- !u!1 &106867886
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,7 +1585,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -245}
-  m_SizeDelta: {x: 0, y: 76.20001}
+  m_SizeDelta: {x: 490, y: 76.20001}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &217157253
 MonoBehaviour:
@@ -2834,6 +2860,7 @@ GameObject:
   - component: {fileID: 402789398}
   - component: {fileID: 402789400}
   - component: {fileID: 402789399}
+  - component: {fileID: 402789401}
   m_Layer: 5
   m_Name: Toggle (6)
   m_TagString: Untagged
@@ -2856,9 +2883,9 @@ RectTransform:
   - {fileID: 1451706239}
   m_Father: {fileID: 217157252}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 455, y: -38.100006}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &402789399
@@ -2939,6 +2966,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
+--- !u!114 &402789401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402789397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14957f28edf8ff4196ba0df5bd1c665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.UIToggleSound
 --- !u!1 &402858219 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5605630337479801281, guid: 670e27b0bc1d0104187fbe2369510688,
@@ -4541,6 +4580,7 @@ GameObject:
   - component: {fileID: 688169835}
   - component: {fileID: 688169834}
   - component: {fileID: 688169833}
+  - component: {fileID: 688169836}
   m_Layer: 5
   m_Name: TutorialButton
   m_TagString: Untagged
@@ -4662,6 +4702,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688169831}
   m_CullTransparentMesh: 1
+--- !u!114 &688169836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688169831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4338a4429a5eb4e95fe1259875699f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.UIButtonSound
 --- !u!1 &703470349 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5179956044016760147, guid: 4898ac91857f3944eaec0d22a9d6e605,
@@ -4773,6 +4825,7 @@ GameObject:
   - component: {fileID: 752456767}
   - component: {fileID: 752456766}
   - component: {fileID: 752456765}
+  - component: {fileID: 752456769}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -4882,6 +4935,18 @@ RectTransform:
   m_AnchoredPosition: {x: 120, y: 20}
   m_SizeDelta: {x: 210, y: 65}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &752456769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752456764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4338a4429a5eb4e95fe1259875699f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.UIButtonSound
 --- !u!1 &753932391
 GameObject:
   m_ObjectHideFlags: 0
@@ -6754,6 +6819,7 @@ GameObject:
   - component: {fileID: 875206863}
   - component: {fileID: 875206865}
   - component: {fileID: 875206864}
+  - component: {fileID: 875206866}
   m_Layer: 5
   m_Name: Toggle (3)
   m_TagString: Untagged
@@ -6776,9 +6842,9 @@ RectTransform:
   - {fileID: 2035928634}
   m_Father: {fileID: 217157252}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 245, y: -38.100006}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &875206864
@@ -6859,6 +6925,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 1
+--- !u!114 &875206866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875206862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14957f28edf8ff4196ba0df5bd1c665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.UIToggleSound
 --- !u!1 &876220792 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2186235672684911368, guid: c957959c29ea5d44f89fabe9b6f48637,
@@ -6877,6 +6955,7 @@ GameObject:
   - component: {fileID: 880089042}
   - component: {fileID: 880089041}
   - component: {fileID: 880089040}
+  - component: {fileID: 880089044}
   m_Layer: 5
   m_Name: DoneButton
   m_TagString: Untagged
@@ -6986,6 +7065,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 20}
   m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &880089044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880089039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4338a4429a5eb4e95fe1259875699f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.UIButtonSound
 --- !u!1 &893186247
 GameObject:
   m_ObjectHideFlags: 0
@@ -7275,6 +7366,7 @@ GameObject:
   - component: {fileID: 1130009143}
   - component: {fileID: 1130009145}
   - component: {fileID: 1130009144}
+  - component: {fileID: 1130009146}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -7297,9 +7389,9 @@ RectTransform:
   - {fileID: 1658445788}
   m_Father: {fileID: 217157252}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 35, y: -38.100006}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1130009144
@@ -7380,6 +7472,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
+--- !u!114 &1130009146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130009142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14957f28edf8ff4196ba0df5bd1c665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.UIToggleSound
 --- !u!1001 &1130381387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12682,7 +12786,19 @@ MonoBehaviour:
       m_Calls: []
   OnRoomCompleted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 306250083}
+        m_TargetAssemblyTypeName: ColorRoomVR.AudioManager, Assembly-CSharp
+        m_MethodName: PlayRoomComplete
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1208423742
 Transform:
   m_ObjectHideFlags: 0
@@ -13926,6 +14042,7 @@ GameObject:
   - component: {fileID: 1523383183}
   - component: {fileID: 1523383185}
   - component: {fileID: 1523383184}
+  - component: {fileID: 1523383186}
   m_Layer: 5
   m_Name: Toggle (2)
   m_TagString: Untagged
@@ -13948,9 +14065,9 @@ RectTransform:
   - {fileID: 1170539309}
   m_Father: {fileID: 217157252}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -38.100006}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1523383184
@@ -14031,6 +14148,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
+--- !u!114 &1523383186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523383182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14957f28edf8ff4196ba0df5bd1c665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.UIToggleSound
 --- !u!1 &1525777906 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7391856057456400519, guid: c1ed7b59ac4f3b44d9d4da74e4b0f622,
@@ -14222,6 +14351,7 @@ GameObject:
   - component: {fileID: 1578554322}
   - component: {fileID: 1578554321}
   - component: {fileID: 1578554323}
+  - component: {fileID: 1578554324}
   m_Layer: 5
   m_Name: SkipButton
   m_TagString: Untagged
@@ -14331,6 +14461,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1578554324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578554319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4338a4429a5eb4e95fe1259875699f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.UIButtonSound
 --- !u!1 &1582206859 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1335748167587672091, guid: 0ab6c916f3669f2469665f3f987da3f5,
@@ -14348,6 +14490,7 @@ GameObject:
   - component: {fileID: 1594594641}
   - component: {fileID: 1594594643}
   - component: {fileID: 1594594642}
+  - component: {fileID: 1594594644}
   m_Layer: 5
   m_Name: Toggle (4)
   m_TagString: Untagged
@@ -14370,9 +14513,9 @@ RectTransform:
   - {fileID: 626141840}
   m_Father: {fileID: 217157252}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 315, y: -38.100006}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1594594642
@@ -14453,6 +14596,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
+--- !u!114 &1594594644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594594640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14957f28edf8ff4196ba0df5bd1c665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.UIToggleSound
 --- !u!1 &1613463511 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1561494797360231425, guid: 251771f9b47efa94287f89bda196a04a,
@@ -15045,6 +15200,7 @@ GameObject:
   - component: {fileID: 1740306760}
   - component: {fileID: 1740306759}
   - component: {fileID: 1740306761}
+  - component: {fileID: 1740306762}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -15154,6 +15310,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1740306762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740306757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4338a4429a5eb4e95fe1259875699f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.UIButtonSound
 --- !u!1 &1748806982
 GameObject:
   m_ObjectHideFlags: 0
@@ -15166,6 +15334,7 @@ GameObject:
   - component: {fileID: 1748806985}
   - component: {fileID: 1748806984}
   - component: {fileID: 1748806986}
+  - component: {fileID: 1748806987}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -15275,6 +15444,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1748806987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748806982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4338a4429a5eb4e95fe1259875699f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.UIButtonSound
 --- !u!1 &1791290064 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2805854155535351678, guid: 7555f58c2217c21478d8bfeea90b2460,
@@ -16268,6 +16449,7 @@ GameObject:
   - component: {fileID: 1944448760}
   - component: {fileID: 1944448762}
   - component: {fileID: 1944448761}
+  - component: {fileID: 1944448763}
   m_Layer: 5
   m_Name: Toggle (5)
   m_TagString: Untagged
@@ -16290,9 +16472,9 @@ RectTransform:
   - {fileID: 893186248}
   m_Father: {fileID: 217157252}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 385, y: -38.100006}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1944448761
@@ -16373,6 +16555,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
+--- !u!114 &1944448763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944448759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14957f28edf8ff4196ba0df5bd1c665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.UIToggleSound
 --- !u!1 &1956344724 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6128978976424680960, guid: e244994860c9d1e41a13047ac19b4623,
