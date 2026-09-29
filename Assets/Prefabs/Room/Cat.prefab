@@ -289,7 +289,6 @@ GameObject:
   - component: {fileID: 2222802465814285425}
   - component: {fileID: 1727270135491310175}
   - component: {fileID: 3477542178069638871}
-  - component: {fileID: 8238150164412313463}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -445,7 +444,13 @@ MonoBehaviour:
   messages:
   - Meow
   - Zzzz
+  - Zzz...
+  - Mmm...
+  - Zzzz
+  - Zzz...
   secondsPerMessage: 3
+  meowClip: {fileID: 8300000, guid: ae6df576c7a9b3342934dfd3c69206a4, type: 3}
+  meowMessage: Meow
 --- !u!114 &3477542178069638871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,18 +467,3 @@ MonoBehaviour:
   duration: 0.4
   vibrato: 6
   elasticity: 0.6
---- !u!114 &8238150164412313463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3747998882654496163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8aa8913288bcc549a88647ba8ceb329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.SoundOnPaint
-  target: {fileID: 850482165570290147}
-  groupTarget: {fileID: 0}
-  clip: {fileID: 8300000, guid: ae6df576c7a9b3342934dfd3c69206a4, type: 3}

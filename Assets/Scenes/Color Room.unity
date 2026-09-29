@@ -19126,6 +19126,7 @@ MonoBehaviour:
   target: {fileID: 1650530489960199111}
   groupTarget: {fileID: 0}
   clip: {fileID: 8300000, guid: 4a0214e900c716d4397cd4713dca34f2, type: 3}
+  firstPaintOnly: 0
 --- !u!4 &2399905663808980543 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400052461379203144, guid: d15fd9f3d50211e468b22dc63bd6732a,

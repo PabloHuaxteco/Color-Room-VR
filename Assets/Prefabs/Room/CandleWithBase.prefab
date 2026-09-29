@@ -504,6 +504,7 @@ MonoBehaviour:
   target: {fileID: 3368644827535727901}
   groupTarget: {fileID: 0}
   clip: {fileID: 8300000, guid: f777fa15dcf4dab41ae825850494f8e7, type: 3}
+  firstPaintOnly: 1
 --- !u!1 &7825861889918742596
 GameObject:
   m_ObjectHideFlags: 0
