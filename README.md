@@ -1,6 +1,6 @@
 # Color Room VR
 
-A cozy VR room to paint. Point at any object with your right controller, pick a color from the palette and pull the trigger to paint it. Paint everything to complete the room. Your progress is saved between sessions, and some objects react when painted (candles, fan, cat, curtains and more).
+A cozy VR room to paint. Point at any object with your right controller, pick a color from the palette and pull the trigger to paint it. Paint everything to complete the room. Your progress is saved between sessions, and some objects react when painted (candles, fan, cat, radio and more).
 
 Made as a challenge to complete the [Unity VR Development pathway](https://learn.unity.com/pathway/vr-development).
 
@@ -50,7 +50,7 @@ The scene includes the XR Device Simulator (XR Interaction Toolkit sample). Bind
 - Unity **6000.3.17f1**
 - Universal Render Pipeline 17.3
 - OpenXR (any OpenXR headset), or the XR Device Simulator
-- Target platform: PC (Windows). Performance on Quest 3 is the long-term goal and has not been validated on a device yet (see [`docs/perf-report.md`](docs/perf-report.md)).
+- Target platform: PC (Windows). Performance on Quest 3 is the long-term goal and has not been validated on a device yet.
 
 ## How to try it
 
@@ -79,7 +79,6 @@ Progress is saved as JSON in `Application.persistentDataPath/ColorsRoom_{roomID}
 ## Credits and license
 
 - Models, sounds, music and AI-generated images: see [`CREDITS.md`](CREDITS.md).
-- Performance notes: [`docs/perf-report.md`](docs/perf-report.md).
 - The project is released under the MIT license: see [`LICENSE`](LICENSE).
 
 ## Demo video
