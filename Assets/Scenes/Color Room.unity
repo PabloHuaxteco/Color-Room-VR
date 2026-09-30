@@ -14231,6 +14231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1558736875}
   - component: {fileID: 1558736874}
+  - component: {fileID: 1558736876}
   m_Layer: 0
   m_Name: PaintVFXManager
   m_TagString: Untagged
@@ -14268,6 +14269,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1558736876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558736873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb3d6ba8de9f322448d6708fc514c3dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.PaintEffectManager
+  mode: 1
+  duration: 0.5
+  ease: 6
 --- !u!1 &1567878712 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2554244596211774842, guid: 0ab6c916f3669f2469665f3f987da3f5,
@@ -14319,6 +14335,7 @@ MonoBehaviour:
     m_Reference: {fileID: -7560851734690860916, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   vfxManager: {fileID: 1558736874}
+  paintEffect: {fileID: 1558736876}
   palette: {fileID: 795561215}
   hapticAmplitude: 0.5
   hapticDuration: 0.1

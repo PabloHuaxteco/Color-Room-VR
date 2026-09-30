@@ -16,6 +16,8 @@ namespace ColorRoomVR
         [Tooltip("Action that paints the hovered object (right hand trigger).")]
         [SerializeField] private InputActionProperty paintAction;
         [SerializeField] private PaintVFXManager vfxManager;
+        [Tooltip("Optional. Animates the object's color change when painting.")]
+        [SerializeField] private PaintEffectManager paintEffect;
         [SerializeField] private ColorPaletteController palette;
         [Header("Haptics")]
         [Tooltip("Haptic pulse sent to the painting controller when the player paints.")]
@@ -132,13 +134,17 @@ namespace ColorRoomVR
 
         private void Paint(RaycastHit hit)
         {
-            if (_hoveredGroup != null)
-                _hoveredGroup.SetColor(palette.SelectedColor);
-            else if (_hoveredObject != null)
-                _hoveredObject.SetColor(palette.SelectedColor);
-            else
+            if (_hoveredGroup == null && _hoveredObject == null)
                 return;
 
+            paintEffect?.Capture(_hoveredObject, _hoveredGroup);
+
+            if (_hoveredGroup != null)
+                _hoveredGroup.SetColor(palette.SelectedColor);
+            else
+                _hoveredObject.SetColor(palette.SelectedColor);
+
+            paintEffect?.Play(palette.SelectedColor);
             vfxManager?.PlayAt(hit.point, hit.normal, palette.SelectedColor);
             SendPaintHaptic();
             AudioManager.Instance?.PlayPaint();

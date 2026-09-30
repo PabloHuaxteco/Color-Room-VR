@@ -16,6 +16,7 @@ namespace ColorRoomVR
         public UnityEvent OnPainted;
 
         public string GroupID => groupID;
+        public IReadOnlyList<PaintableObject> Members => members;
         /// <summary>True only while OnPainted is being invoked for a paint made by the player (false when restoring a save).</summary>
         public bool LastPaintByPlayer { get; private set; }
 

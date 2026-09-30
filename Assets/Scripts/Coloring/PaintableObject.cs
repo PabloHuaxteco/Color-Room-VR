@@ -33,6 +33,8 @@ namespace ColorRoomVR
         public string ObjectID => objectID;
         public bool IsPartOfGroup => paintableGroup != null;
         public PaintableGroup Group => paintableGroup;
+        /// <summary>The color currently rendered, which differs from the saved one while a paint effect is running.</summary>
+        public Color VisualColor { get; private set; } = Color.white;
         /// <summary>True only while OnPainted is being invoked for a paint made by the player (false when restoring a save).</summary>
         public bool LastPaintByPlayer { get; private set; }
 
@@ -88,29 +90,39 @@ namespace ColorRoomVR
         /// <param name="isPlayerAction">If true, this action was initiated by the player, saving the color and invoking the OnPainted event.</param>
         public void SetColor(Color color, bool isPlayerAction = true)
         {
-            EnsureInitialized();
-
-            if (applyMode == ApplyMode.AllMaterials)
-            {
-                for (int i = 0; i < _meshRenderer.sharedMaterials.Length; i++)
-                {
-                    _meshRenderer.GetPropertyBlock(_mpb, i);
-                    _mpb.SetColor("_BaseColor", color);
-                    _meshRenderer.SetPropertyBlock(_mpb, i);
-                }
-            }
-            else
-            {
-                _meshRenderer.GetPropertyBlock(_mpb, materialIndex);
-                _mpb.SetColor("_BaseColor", color);
-                _meshRenderer.SetPropertyBlock(_mpb, materialIndex);
-            }
+            ApplyVisualColor(color);
 
             if (isPlayerAction)
             {
                 ColorsDataManager.Instance.SetColor(objectID, color);
                 NotifyPainted(true);
             }
+        }
+
+        /// <summary>
+        /// Changes only what is rendered (no saving, no events). Used by paint effects to animate between colors.
+        /// </summary>
+        public void ApplyVisualColor(Color color)
+        {
+            EnsureInitialized();
+            VisualColor = color;
+
+            if (applyMode == ApplyMode.AllMaterials)
+            {
+                for (int i = 0; i < _meshRenderer.sharedMaterials.Length; i++)
+                    WriteBaseColor(i, color);
+            }
+            else
+            {
+                WriteBaseColor(materialIndex, color);
+            }
+        }
+
+        private void WriteBaseColor(int index, Color color)
+        {
+            _meshRenderer.GetPropertyBlock(_mpb, index);
+            _mpb.SetColor("_BaseColor", color);
+            _meshRenderer.SetPropertyBlock(_mpb, index);
         }
 
         // Invokes OnPainted with LastPaintByPlayer set only for the duration of the call.
