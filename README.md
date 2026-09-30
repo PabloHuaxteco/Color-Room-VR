@@ -76,6 +76,38 @@ Progress is saved as JSON in `Application.persistentDataPath/ColorsRoom_{roomID}
 - [AnotherColorPicker](https://github.com/Dandarawy/ACP) (bundled in `Assets/AnotherColorPicker`)
 - [DOTween](https://dotween.demigiant.com/) 1.2.815 (bundled in `Assets/Plugins/Demigiant`)
 
+## Architecture
+
+All game code lives in `Assets/Scripts` under the `ColorRoomVR` namespace, split by role:
+
+| Folder | Responsibility |
+| --- | --- |
+| `Coloring/` | `PaintableObject` (one mesh) and `PaintableGroup` (several objects painted together). Colors are applied with a `MaterialPropertyBlock` on `_BaseColor`, so shared materials are never modified. |
+| `Data/` | `ColorsDataManager` keeps an `id -> Color` dictionary and saves it (debounced) through `IColorPersistenceService`. The default implementation writes JSON to `Application.persistentDataPath`. |
+| `Interaction/` | `ObjectDetection` raycasts from the right controller, outlines the hovered object and paints it on trigger. `PaletteAnchor` keeps the palette on the left hand or pinned in the world. `PaintVFXManager` plays paint effects. |
+| `Progress/` | `PaintProgressManager` counts paintable units (a group counts as one) and raises events when progress changes or the room is completed. |
+| `UI/` | Progress counter, room-complete panel with confetti, first-run tutorial and world-space panel placement. |
+| `Reactions/` | Components such as `AnimationOnPaint` and `EnableOnPaint`, wired to `PaintableObject.OnPainted` to animate or unlock things in the room. |
+
+### Paint flow
+
+```mermaid
+flowchart LR
+    A[Right controller ray] --> B[ObjectDetection]
+    B -->|trigger| C[PaintableObject / PaintableGroup<br/>SetColor]
+    C --> D[ColorsDataManager]
+    D -->|debounced| E[(JSON save file)]
+    D -->|OnColorChanged| F[PaintProgressManager]
+    C -->|OnPainted| G[Reactions]
+    F --> H[Progress UI / Room complete panel]
+```
+
+Design notes:
+
+- **Persistence is swappable.** `ColorsDataManager` only talks to `IColorPersistenceService`, so the JSON file backend can be replaced without touching the painting code.
+- **Progress comes from the save data.** An object counts as painted when its id has a saved color, so progress and reactions are restored automatically when the scene loads.
+- **Stable ids.** Each paintable (or group) has an id used as its save key; renaming it orphans its saved color.
+
 ## Design document
 
 The original design document, updated to match the final project: [Color Room VR Project Design Doc (PDF)](docs/Color%20Room%20VR%20Project%20Design%20Doc.pdf).
