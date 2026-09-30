@@ -288,6 +288,7 @@ GameObject:
   - component: {fileID: 850482165570290147}
   - component: {fileID: 2222802465814285425}
   - component: {fileID: 1727270135491310175}
+  - component: {fileID: 3477542178069638871}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -425,6 +426,7 @@ MonoBehaviour:
   objectsToEnable:
   - {fileID: 1410118578291296670}
   target: {fileID: 850482165570290147}
+  groupTarget: {fileID: 0}
 --- !u!114 &1727270135491310175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,6 +442,27 @@ MonoBehaviour:
   target: {fileID: 850482165570290147}
   label: {fileID: 6056929345279492453}
   messages:
+  - Mmm...
+  - Zzzz
+  - Zzz...
   - Meow
   - Zzzz
+  - Zzz...
   secondsPerMessage: 3
+  meowClip: {fileID: 8300000, guid: ae6df576c7a9b3342934dfd3c69206a4, type: 3}
+--- !u!114 &3477542178069638871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3747998882654496163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ca7c9d7aaac304db683bb94fa890ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.PunchOnEnable
+  punch: {x: 0.2, y: 0.2, z: 0.2}
+  duration: 0.4
+  vibrato: 6
+  elasticity: 0.6

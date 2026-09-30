@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6971049070319153654}
   - component: {fileID: 5881508038173262615}
   - component: {fileID: 4567271621070720076}
+  - component: {fileID: 5341985401317185162}
   m_Layer: 0
   m_Name: Flowerpot_5_TreeTrunk
   m_TagString: Untagged
@@ -30,7 +31,8 @@ Transform:
   m_LocalPosition: {x: 0.00019218444, y: 0.009422627, z: 0.0003768158}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7348758176480041348}
   m_Father: {fileID: 8433723091935547861}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5881508038173262615
@@ -90,6 +92,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5341985401317185162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28619095153110295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ca7c9d7aaac304db683bb94fa890ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.PunchOnEnable
+  punch: {x: 0.2, y: 0.2, z: 0.2}
+  duration: 0.4
+  vibrato: 6
+  elasticity: 0.6
 --- !u!1 &1327353283610176530
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +251,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8433723091935547861}
+  - component: {fileID: 9134691723255032826}
+  - component: {fileID: 2195846878918336323}
   m_Layer: 0
   m_Name: Flowerpot_5
   m_TagString: Untagged
@@ -255,10 +275,41 @@ Transform:
   m_Children:
   - {fileID: 4679410876214130644}
   - {fileID: 8509934487110396184}
-  - {fileID: 7348758176480041348}
   - {fileID: 6971049070319153654}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9134691723255032826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5527974202873105090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ca7c9d7aaac304db683bb94fa890ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.PunchOnEnable
+  punch: {x: 0.2, y: 0.2, z: 0.2}
+  duration: 0.4
+  vibrato: 6
+  elasticity: 0.6
+--- !u!114 &2195846878918336323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5527974202873105090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9879a999d402d4c46b9ed48f6c060aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.EnableOnPaint
+  objectsToEnable:
+  - {fileID: 28619095153110295}
+  target: {fileID: 4319061780337068986}
+  groupTarget: {fileID: 0}
 --- !u!1 &5665261759304344636
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,12 +426,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7009033165288847571}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000059604638, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0003414917, y: 0.012988978, z: -0.00039714813}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0005336893, y: 0.0035663573, z: -0.0007739617}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8433723091935547861}
+  m_Father: {fileID: 6971049070319153654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &31471351568679033
 MeshFilter:

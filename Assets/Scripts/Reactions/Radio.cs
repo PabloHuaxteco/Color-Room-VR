@@ -9,6 +9,8 @@ namespace ColorRoomVR
         [SerializeField] private PaintableGroup buttonsTarget;
         [SerializeField] private GameObject notes;
         [SerializeField] private Animator animator;
+        [Tooltip("3D looping AudioSource for the radio music. The clip is assigned here; with no clip nothing plays.")]
+        [SerializeField] private AudioSource music;
 
         private bool isBasePainted;
         private bool isButtonsPainted;
@@ -24,6 +26,8 @@ namespace ColorRoomVR
         {
             baseTarget.OnPainted.RemoveListener(OnBasePainted);
             buttonsTarget.OnPainted.RemoveListener(OnButtonsPainted);
+            if (music != null)
+                music.Stop();
         }
 
         private void OnBasePainted()
@@ -45,6 +49,9 @@ namespace ColorRoomVR
             isPlaying = true;
             notes.SetActive(true);
             animator.SetTrigger("Play");
+
+            if (music != null && music.clip != null)
+                music.Play();
         }
     }
 }

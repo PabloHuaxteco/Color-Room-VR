@@ -16,6 +16,9 @@ namespace ColorRoomVR
         public UnityEvent OnPainted;
 
         public string GroupID => groupID;
+        public IReadOnlyList<PaintableObject> Members => members;
+        /// <summary>True only while OnPainted is being invoked for a paint made by the player (false when restoring a save).</summary>
+        public bool LastPaintByPlayer { get; private set; }
 
         private void Reset()
         {
@@ -30,7 +33,7 @@ namespace ColorRoomVR
             {
                 SetColor(saved, false);
                 // Like PaintableObject, re-fire events so reactions re-activate on load.
-                NotifyPainted();
+                NotifyPainted(false);
             }
             else
             {
@@ -56,17 +59,20 @@ namespace ColorRoomVR
             if (isPlayerAction)
             {
                 ColorsDataManager.Instance.SetColor(groupID, color);
-                NotifyPainted();
+                NotifyPainted(true);
             }
         }
 
         // Fires the group event and every member's event, so reactions wired to any of them run
         // regardless of the order in which members registered.
-        private void NotifyPainted()
+        private void NotifyPainted(bool byPlayer)
         {
-            OnPainted?.Invoke();
+            LastPaintByPlayer = byPlayer;
+            try { OnPainted?.Invoke(); }
+            finally { LastPaintByPlayer = false; }
+
             foreach (var m in members)
-                m.OnPainted?.Invoke();
+                m.NotifyPainted(byPlayer);
         }
 
         public void EnableOutline(Color color)

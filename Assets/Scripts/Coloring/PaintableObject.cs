@@ -24,6 +24,11 @@ namespace ColorRoomVR
         [Tooltip("Fired when the object's color is set by the player.")]
         public UnityEvent OnPainted;
 
+        // Shader property ids
+        private static readonly int PrevColorId = Shader.PropertyToID("_PrevColor");
+        private static readonly int PaintOriginId = Shader.PropertyToID("_PaintOrigin");
+        private static readonly int PaintRadiusId = Shader.PropertyToID("_PaintRadius");
+
         // Private fields
         private MeshRenderer _meshRenderer;
         private MaterialPropertyBlock _mpb;
@@ -33,6 +38,10 @@ namespace ColorRoomVR
         public string ObjectID => objectID;
         public bool IsPartOfGroup => paintableGroup != null;
         public PaintableGroup Group => paintableGroup;
+        /// <summary>The color currently rendered, which differs from the saved one while a paint effect is running.</summary>
+        public Color VisualColor { get; private set; } = Color.white;
+        /// <summary>True only while OnPainted is being invoked for a paint made by the player (false when restoring a save).</summary>
+        public bool LastPaintByPlayer { get; private set; }
 
         private void Awake()
         {
@@ -71,7 +80,7 @@ namespace ColorRoomVR
                 SetColor(saved, false);
                 // If an object is already painted on load, we should also trigger its event
                 // to ensure animations/unlocks are activated correctly.
-                OnPainted?.Invoke();
+                NotifyPainted(false);
             }
             else
             {
@@ -86,29 +95,112 @@ namespace ColorRoomVR
         /// <param name="isPlayerAction">If true, this action was initiated by the player, saving the color and invoking the OnPainted event.</param>
         public void SetColor(Color color, bool isPlayerAction = true)
         {
+            ApplyVisualColor(color);
+
+            if (isPlayerAction)
+            {
+                ColorsDataManager.Instance.SetColor(objectID, color);
+                NotifyPainted(true);
+            }
+        }
+
+        /// <summary>
+        /// Changes only what is rendered (no saving, no events). Used by paint effects to animate between colors.
+        /// </summary>
+        public void ApplyVisualColor(Color color)
+        {
+            EnsureInitialized();
+            VisualColor = color;
+
+            if (applyMode == ApplyMode.AllMaterials)
+            {
+                for (int i = 0; i < _meshRenderer.sharedMaterials.Length; i++)
+                    WriteBaseColor(i, color);
+            }
+            else
+            {
+                WriteBaseColor(materialIndex, color);
+            }
+        }
+
+        private void WriteBaseColor(int index, Color color)
+        {
+            _meshRenderer.GetPropertyBlock(_mpb, index);
+            _mpb.SetColor("_BaseColor", color);
+            _meshRenderer.SetPropertyBlock(_mpb, index);
+        }
+
+        /// <summary>True if the painted material(s) use the "Color Room/Paintable Lit" shader, which can play SetPaintReveal.</summary>
+        public bool SupportsPaintReveal
+        {
+            get
+            {
+                EnsureInitialized();
+                var materials = _meshRenderer.sharedMaterials;
+
+                if (applyMode == ApplyMode.AllMaterials)
+                {
+                    foreach (var m in materials)
+                    {
+                        if (m == null || !m.HasProperty(PaintRadiusId))
+                            return false;
+                    }
+                    return materials.Length > 0;
+                }
+
+                return materialIndex < materials.Length && materials[materialIndex] != null
+                    && materials[materialIndex].HasProperty(PaintRadiusId);
+            }
+        }
+
+        /// <summary>World-space bounds of the renderer.</summary>
+        public Bounds WorldBounds
+        {
+            get
+            {
+                EnsureInitialized();
+                return _meshRenderer.bounds;
+            }
+        }
+
+        /// <summary>
+        /// Shows the current color inside a sphere of the given radius around origin and the previous color outside it.
+        /// A huge radius (see PaintRevealDone) means fully painted. Requires the Paintable Lit shader.
+        /// </summary>
+        public void SetPaintReveal(Color previousColor, Vector3 origin, float radius)
+        {
             EnsureInitialized();
 
             if (applyMode == ApplyMode.AllMaterials)
             {
                 for (int i = 0; i < _meshRenderer.sharedMaterials.Length; i++)
-                {
-                    _meshRenderer.GetPropertyBlock(_mpb, i);
-                    _mpb.SetColor("_BaseColor", color);
-                    _meshRenderer.SetPropertyBlock(_mpb, i);
-                }
+                    WritePaintReveal(i, previousColor, origin, radius);
             }
             else
             {
-                _meshRenderer.GetPropertyBlock(_mpb, materialIndex);
-                _mpb.SetColor("_BaseColor", color);
-                _meshRenderer.SetPropertyBlock(_mpb, materialIndex);
+                WritePaintReveal(materialIndex, previousColor, origin, radius);
             }
+        }
 
-            if (isPlayerAction)
-            {
-                ColorsDataManager.Instance.SetColor(objectID, color);
-                OnPainted?.Invoke();
-            }
+        /// <summary>Radius that makes the reveal cover the whole object (the shader's default).</summary>
+        public const float PaintRevealDone = 10000f;
+
+        private void WritePaintReveal(int index, Color previousColor, Vector3 origin, float radius)
+        {
+            _meshRenderer.GetPropertyBlock(_mpb, index);
+            _mpb.SetColor(PrevColorId, previousColor);
+            _mpb.SetVector(PaintOriginId, origin);
+            _mpb.SetFloat(PaintRadiusId, radius);
+            _meshRenderer.SetPropertyBlock(_mpb, index);
+        }
+
+        // Invokes OnPainted with LastPaintByPlayer set only for the duration of the call.
+        // Also used by PaintableGroup to notify its members.
+        internal void NotifyPainted(bool byPlayer)
+        {
+            LastPaintByPlayer = byPlayer;
+            try { OnPainted?.Invoke(); }
+            finally { LastPaintByPlayer = false; }
         }
 
         public void EnableOutline(Color color)

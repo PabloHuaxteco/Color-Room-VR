@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4806763883068668287}
   - component: {fileID: 370512611095488503}
+  - component: {fileID: 1062227509333282483}
+  - component: {fileID: 3634175719963019837}
   m_Layer: 0
   m_Name: Lamp
   m_TagString: Untagged
@@ -50,6 +52,38 @@ MonoBehaviour:
   objectsToEnable:
   - {fileID: 8486789982002471669}
   target: {fileID: 2365134651272557733}
+  groupTarget: {fileID: 0}
+--- !u!114 &1062227509333282483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5605630337479801281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ca7c9d7aaac304db683bb94fa890ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.PunchOnEnable
+  punch: {x: 0.2, y: 0.2, z: 0.2}
+  duration: 0.4
+  vibrato: 6
+  elasticity: 0.6
+--- !u!114 &3634175719963019837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5605630337479801281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8aa8913288bcc549a88647ba8ceb329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.SoundOnPaint
+  target: {fileID: 2365134651272557733}
+  groupTarget: {fileID: 0}
+  clip: {fileID: 8300000, guid: 4a0214e900c716d4397cd4713dca34f2, type: 3}
 --- !u!1 &6754265624539524683
 GameObject:
   m_ObjectHideFlags: 0

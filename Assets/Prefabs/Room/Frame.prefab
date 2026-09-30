@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 9020074220314226622}
   - component: {fileID: 8156610660287940895}
   - component: {fileID: 624349743455285133}
+  - component: {fileID: 7778187361735503677}
+  - component: {fileID: 4031064053924117800}
   m_Layer: 0
   m_Name: Frame
   m_TagString: Untagged
@@ -60,6 +62,11 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -82,9 +89,11 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &8156610660287940895
 MeshCollider:
@@ -128,3 +137,34 @@ MonoBehaviour:
   OnPainted:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7778187361735503677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282624528853683963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ca7c9d7aaac304db683bb94fa890ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.PunchOnEnable
+  punch: {x: 0.2, y: 0.2, z: 0.2}
+  duration: 0.4
+  vibrato: 6
+  elasticity: 0.6
+--- !u!114 &4031064053924117800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282624528853683963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9beb532cdd5997a4f9dd397409e56b00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.FadeInOnPaint
+  target: {fileID: 624349743455285133}
+  picture: {fileID: 0}
+  duration: 0.8

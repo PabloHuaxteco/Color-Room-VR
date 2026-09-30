@@ -9,8 +9,12 @@ namespace ColorRoomVR
         // Private serialized fields
         [SerializeField] private PaintableObject target;
         [SerializeField] private TMP_Text label;
-        [SerializeField] private string[] messages = { "Meow", "Zzzz" };
+        [Tooltip("Messages shown in a loop. Only the one matching Meow Message also plays the meow sound.")]
+        [SerializeField] private string[] messages = { "Meow", "Zzzz", "Zzz...", "Mmm...", "Zzzz", "Zzz..." };
         [SerializeField] private float secondsPerMessage = 3f;
+        [Tooltip("Optional. With no clip the meow message is silent.")]
+        [SerializeField] private AudioClip meowClip;
+        private const string meowMessage = "Meow";
 
         private Coroutine loop;
         private Transform bubble;
@@ -45,6 +49,8 @@ namespace ColorRoomVR
             while (true)
             {
                 label.text = messages[index];
+                if (meowClip != null && messages[index] == meowMessage)
+                    AudioManager.Instance?.Play(meowClip, transform.position);
                 index = (index + 1) % messages.Length;
                 yield return wait;
             }

@@ -358,6 +358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3856309774057906905}
   - component: {fileID: 3897804879515394363}
+  - component: {fileID: 465779463488995730}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Untagged
@@ -402,6 +403,22 @@ MonoBehaviour:
   minute: {fileID: 7784146308288096231}
   second: {fileID: 6299274837223969027}
   syncDuration: 1.5
+--- !u!114 &465779463488995730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6990716166823464342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ca7c9d7aaac304db683bb94fa890ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.PunchOnEnable
+  punch: {x: 0.2, y: 0.2, z: 0.2}
+  duration: 0.4
+  vibrato: 6
+  elasticity: 0.6
 --- !u!1 &7658551282125455817
 GameObject:
   m_ObjectHideFlags: 0
