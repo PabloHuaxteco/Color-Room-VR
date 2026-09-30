@@ -10,12 +10,24 @@ namespace ColorRoomVR
     /// </summary>
     public class PaintEffectManager : MonoBehaviour
     {
-        public enum Mode { None, Tween }
+        public enum Mode
+        {
+            None,
+            /// <summary>Blends the whole object from the old color to the new one.</summary>
+            Tween,
+            /// <summary>The new color spreads from the hit point (needs the "Color Room/Paintable Lit" shader; other objects use Tween).</summary>
+            Shader
+        }
 
         // Private serialized fields
         [SerializeField] private Mode mode = Mode.Tween;
         [SerializeField, Min(0.01f)] private float duration = 0.5f;
         [SerializeField] private Ease ease = Ease.OutQuad;
+        [Header("Shader mode")]
+        [SerializeField, Min(0.01f)] private float revealDuration = 0.8f;
+        [SerializeField] private Ease revealEase = Ease.OutSine;
+        [Tooltip("Added to the distance to the farthest corner so the soft, noisy edge fully leaves the object. Keep it above the material's Paint Edge Width + Noise Amount.")]
+        [SerializeField, Min(0f)] private float revealMargin = 0.3f;
 
         // Private fields
         private readonly List<PaintableObject> _targets = new();
@@ -39,8 +51,8 @@ namespace ColorRoomVR
                 _fromColors.Add(t != null ? t.VisualColor : Color.white);
         }
 
-        /// <summary>Call right after painting, to animate from the captured colors to the new one.</summary>
-        public void Play(Color to)
+        /// <summary>Call right after painting, to animate from the captured colors to the new one. hitPoint is in world space.</summary>
+        public void Play(Color to, Vector3 hitPoint)
         {
             if (mode == Mode.None)
                 return;
@@ -53,8 +65,41 @@ namespace ColorRoomVR
 
                 // Targeting the component (not the transform) so other tweens on the object are left alone.
                 target.DOKill();
-                PlayTween(target, _fromColors[i], to);
+
+                if (mode == Mode.Shader && target.SupportsPaintReveal)
+                    PlayReveal(target, _fromColors[i], hitPoint);
+                else
+                    PlayTween(target, _fromColors[i], to);
             }
+        }
+
+        // The new color is already in _BaseColor (SetColor); the shader blends it with the previous one around the hit point.
+        private void PlayReveal(PaintableObject target, Color from, Vector3 hitPoint)
+        {
+            float maxRadius = FarthestCornerDistance(target.WorldBounds, hitPoint) + revealMargin;
+            target.SetPaintReveal(from, hitPoint, 0f);
+
+            DOVirtual.Float(0f, maxRadius, revealDuration, r => target.SetPaintReveal(from, hitPoint, r))
+                .SetEase(revealEase)
+                .SetTarget(target)
+                .SetLink(target.gameObject)
+                .OnKill(() =>
+                {
+                    // Leave the object fully painted if the reveal is cut short by a new paint or by disabling.
+                    if (target != null)
+                        target.SetPaintReveal(from, hitPoint, PaintableObject.PaintRevealDone);
+                });
+        }
+
+        private static float FarthestCornerDistance(Bounds bounds, Vector3 point)
+        {
+            Vector3 c = bounds.center;
+            Vector3 e = bounds.extents;
+            var farthest = new Vector3(
+                point.x > c.x ? c.x - e.x : c.x + e.x,
+                point.y > c.y ? c.y - e.y : c.y + e.y,
+                point.z > c.z ? c.z - e.z : c.z + e.z);
+            return Vector3.Distance(point, farthest);
         }
 
         private void PlayTween(PaintableObject target, Color from, Color to)

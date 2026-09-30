@@ -24,6 +24,11 @@ namespace ColorRoomVR
         [Tooltip("Fired when the object's color is set by the player.")]
         public UnityEvent OnPainted;
 
+        // Shader property ids
+        private static readonly int PrevColorId = Shader.PropertyToID("_PrevColor");
+        private static readonly int PaintOriginId = Shader.PropertyToID("_PaintOrigin");
+        private static readonly int PaintRadiusId = Shader.PropertyToID("_PaintRadius");
+
         // Private fields
         private MeshRenderer _meshRenderer;
         private MaterialPropertyBlock _mpb;
@@ -122,6 +127,70 @@ namespace ColorRoomVR
         {
             _meshRenderer.GetPropertyBlock(_mpb, index);
             _mpb.SetColor("_BaseColor", color);
+            _meshRenderer.SetPropertyBlock(_mpb, index);
+        }
+
+        /// <summary>True if the painted material(s) use the "Color Room/Paintable Lit" shader, which can play SetPaintReveal.</summary>
+        public bool SupportsPaintReveal
+        {
+            get
+            {
+                EnsureInitialized();
+                var materials = _meshRenderer.sharedMaterials;
+
+                if (applyMode == ApplyMode.AllMaterials)
+                {
+                    foreach (var m in materials)
+                    {
+                        if (m == null || !m.HasProperty(PaintRadiusId))
+                            return false;
+                    }
+                    return materials.Length > 0;
+                }
+
+                return materialIndex < materials.Length && materials[materialIndex] != null
+                    && materials[materialIndex].HasProperty(PaintRadiusId);
+            }
+        }
+
+        /// <summary>World-space bounds of the renderer.</summary>
+        public Bounds WorldBounds
+        {
+            get
+            {
+                EnsureInitialized();
+                return _meshRenderer.bounds;
+            }
+        }
+
+        /// <summary>
+        /// Shows the current color inside a sphere of the given radius around origin and the previous color outside it.
+        /// A huge radius (see PaintRevealDone) means fully painted. Requires the Paintable Lit shader.
+        /// </summary>
+        public void SetPaintReveal(Color previousColor, Vector3 origin, float radius)
+        {
+            EnsureInitialized();
+
+            if (applyMode == ApplyMode.AllMaterials)
+            {
+                for (int i = 0; i < _meshRenderer.sharedMaterials.Length; i++)
+                    WritePaintReveal(i, previousColor, origin, radius);
+            }
+            else
+            {
+                WritePaintReveal(materialIndex, previousColor, origin, radius);
+            }
+        }
+
+        /// <summary>Radius that makes the reveal cover the whole object (the shader's default).</summary>
+        public const float PaintRevealDone = 10000f;
+
+        private void WritePaintReveal(int index, Color previousColor, Vector3 origin, float radius)
+        {
+            _meshRenderer.GetPropertyBlock(_mpb, index);
+            _mpb.SetColor(PrevColorId, previousColor);
+            _mpb.SetVector(PaintOriginId, origin);
+            _mpb.SetFloat(PaintRadiusId, radius);
             _meshRenderer.SetPropertyBlock(_mpb, index);
         }
 

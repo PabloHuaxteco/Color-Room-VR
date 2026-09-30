@@ -14281,9 +14281,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb3d6ba8de9f322448d6708fc514c3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColorRoomVR.PaintEffectManager
-  mode: 1
+  mode: 2
   duration: 0.5
   ease: 6
+  revealDuration: 0.8
+  revealEase: 3
+  revealMargin: 0.3
 --- !u!1 &1567878712 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2554244596211774842, guid: 0ab6c916f3669f2469665f3f987da3f5,

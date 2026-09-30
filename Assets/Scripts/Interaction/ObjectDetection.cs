@@ -144,7 +144,7 @@ namespace ColorRoomVR
             else
                 _hoveredObject.SetColor(palette.SelectedColor);
 
-            paintEffect?.Play(palette.SelectedColor);
+            paintEffect?.Play(palette.SelectedColor, hit.point);
             vfxManager?.PlayAt(hit.point, hit.normal, palette.SelectedColor);
             SendPaintHaptic();
             AudioManager.Instance?.PlayPaint();
