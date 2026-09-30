@@ -76,6 +76,10 @@ Progress is saved as JSON in `Application.persistentDataPath/ColorsRoom_{roomID}
 - [AnotherColorPicker](https://github.com/Dandarawy/ACP) (bundled in `Assets/AnotherColorPicker`)
 - [DOTween](https://dotween.demigiant.com/) 1.2.815 (bundled in `Assets/Plugins/Demigiant`)
 
+## Design document
+
+The original design document, updated to match the final project: [Color Room VR Project Design Doc (PDF)](docs/Color%20Room%20VR%20Project%20Design%20Doc.pdf).
+
 ## Credits and license
 
 - Models, sounds, music and AI-generated images: see [`CREDITS.md`](CREDITS.md).
