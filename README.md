@@ -6,7 +6,7 @@ Made as a challenge to complete the [Unity VR Development pathway](https://learn
 
 ## Demo video
 
-[![Color Room VR demo video](https://img.youtube.com/vi/OSkjeYYAStE/maxresdefault.jpg)](https://youtu.be/OSkjeYYAStE)
+[![Color Room VR demo video](https://img.youtube.com/vi/OSkjeYYAStE/hqdefault.jpg)](https://youtu.be/OSkjeYYAStE)
 
 Watch on YouTube: https://youtu.be/OSkjeYYAStE
 
