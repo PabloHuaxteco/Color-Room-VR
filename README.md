@@ -4,11 +4,9 @@ A cozy VR room to paint. Point at any object with your right controller, pick a 
 
 Made as a challenge to complete the [Unity VR Development pathway](https://learn.unity.com/pathway/vr-development).
 
-## Demo video
+![Color Room VR gameplay](docs/media/Color%20Room%20VR%20Gif.gif)
 
-[![Color Room VR demo video](https://img.youtube.com/vi/OSkjeYYAStE/hqdefault.jpg)](https://youtu.be/OSkjeYYAStE)
-
-Watch on YouTube: https://youtu.be/OSkjeYYAStE
+Watch walkthrough on YouTube: https://youtu.be/OSkjeYYAStE
 
 ## Controls
 
