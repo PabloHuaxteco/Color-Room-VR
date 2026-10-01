@@ -4,15 +4,11 @@ A cozy VR room to paint. Point at any object with your right controller, pick a 
 
 Made as a challenge to complete the [Unity VR Development pathway](https://learn.unity.com/pathway/vr-development).
 
-## Screenshots
+## Demo video
 
-![The Color Room, ready to be painted](docs/media/hero.png)
+[![Color Room VR demo video](https://img.youtube.com/vi/OSkjeYYAStE/maxresdefault.jpg)](https://youtu.be/OSkjeYYAStE)
 
-![Pointing at an object and painting it](docs/media/painting.gif)
-
-![Painted objects reacting: candles, fan, cat](docs/media/reactions.gif)
-
-![Room complete panel with confetti](docs/media/room-complete.png)
+Watch on YouTube: https://youtu.be/OSkjeYYAStE
 
 ## Controls
 
@@ -116,9 +112,3 @@ The original design document, updated to match the final project: [Color Room VR
 
 - Models, sounds, music and AI-generated images: see [`CREDITS.md`](CREDITS.md).
 - The project is released under the MIT license: see [`LICENSE`](LICENSE).
-
-## Demo video
-
-<!-- TODO(author): add the demo video link here. -->
-
-_Coming soon._
