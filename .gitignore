@@ -75,7 +75,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # Other
-TODO.md
+TODO
 specs/
-docs/
 /Builds/
